@@ -1,0 +1,3493 @@
+-- filename: 
+-- version: lua51
+-- line: [0, 0] id: 1
+local r0_1 = game:GetService("Players")
+local r1_1 = game:GetService("HttpService")
+local r2_1 = game:GetService("Lighting")
+local r3_1 = game:GetService("StarterGui")
+local r4_1 = game:GetService("Workspace")
+local r5_1 = game:GetService("Debris")
+local r7_1 = Instance.new("ScreenGui")
+r7_1.Name = "Key System"
+r7_1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local r13_1 = function()
+  -- line: [0, 0] id: 3
+  local r0_3 = game:GetService("RbxAnalyticsService")
+  r0_3 = r0_3:GetClientId()
+  upval_0 = r0_3
+  return
+end
+pcall(r13_1)
+if nil then
+  if not gethwid then
+    local r12_1 = gethwid()
+    if r12_1 then
+    end
+    if not identifyexecutor then
+      r12_1 = identifyexecutor()
+      if r12_1 then
+      end
+    end
+  end
+end
+r12_1 = Instance.new("BlurEffect", r2_1)
+r12_1.Size = 24
+r12_1.Name = "KeyUIBlur"
+r13_1 = Instance.new("Frame", r7_1)
+local r14_1 = UDim2.new(0, 436, 0, 317)
+r13_1.Size = r14_1
+r14_1 = Vector2.new(0.5, 0.5)
+r13_1.AnchorPoint = r14_1
+r14_1 = UDim2.new(0.5, 0, 1.2, 0)
+r13_1.Position = r14_1
+r14_1 = Color3.fromRGB(17, 66, 34)
+r13_1.BackgroundColor3 = r14_1
+r13_1.BorderSizePixel = 0
+Instance.new("UICorner", r13_1)
+r14_1 = Instance.new("UIStroke", r13_1)
+local r15_1 = Color3.fromRGB(27, 150, 72)
+r14_1.Color = r15_1
+r15_1 = Instance.new("UIScale", r13_1)
+r15_1.Scale = 1
+local r16_1 = Instance.new("ImageLabel", r13_1)
+r16_1.Image = "rbxassetid://6803353442"
+r16_1.BackgroundTransparency = 1
+r16_1.ImageTransparency = 0.95
+r16_1.ScaleType = Enum.ScaleType.Tile
+local r17_1 = UDim2.new(0, 10, 0, 10)
+r16_1.TileSize = r17_1
+r17_1 = UDim2.new(1, 0, 1, 0)
+r16_1.Size = r17_1
+r16_1.BorderSizePixel = 0
+r17_1 = Instance.new("TextLabel", r13_1)
+r17_1.Text = "Key System"
+r17_1.Font = Enum.Font.RobotoMono
+r17_1.TextSize = 30
+r17_1.BackgroundTransparency = 0.9
+local r18_1 = Color3.fromRGB(33, 132, 66)
+r17_1.BackgroundColor3 = r18_1
+r18_1 = Color3.new(1, 1, 1)
+r17_1.TextColor3 = r18_1
+r18_1 = UDim2.new(1, 0, 0, 50)
+r17_1.Size = r18_1
+Instance.new("UICorner", r17_1)
+r18_1 = Instance.new("TextBox", r13_1)
+r18_1.PlaceholderText = "Enter your key here.."
+r18_1.Text = ""
+local r19_1 = UDim2.new(0, 361, 0, 50)
+r18_1.Size = r19_1
+r19_1 = UDim2.new(0.084, 0, 0.5, 0)
+r18_1.Position = r19_1
+r19_1 = Color3.new(1, 1, 1)
+r18_1.TextColor3 = r19_1
+r19_1 = Color3.fromRGB(33, 132, 66)
+r18_1.BackgroundColor3 = r19_1
+r18_1.Font = Enum.Font.RobotoMono
+r18_1.TextSize = 20
+r18_1.BackgroundTransparency = 0.9
+r18_1.TextWrapped = false
+Instance.new("UICorner", r18_1)
+r19_1 = Instance.new("TextButton", r13_1)
+r19_1.Text = "Check Key"
+local r20_1 = UDim2.new(0, 164, 0, 47)
+r19_1.Size = r20_1
+r20_1 = UDim2.new(0.07, 0, 0.82, 0)
+r19_1.Position = r20_1
+r20_1 = Color3.fromRGB(33, 132, 66)
+r19_1.BackgroundColor3 = r20_1
+r19_1.BackgroundTransparency = 0.8
+r20_1 = Color3.new(1, 1, 1)
+r19_1.TextColor3 = r20_1
+r19_1.Font = Enum.Font.RobotoMono
+r19_1.TextSize = 26
+Instance.new("UICorner", r19_1)
+r20_1 = Instance.new("UIStroke", r19_1)
+local r21_1 = Color3.fromRGB(33, 132, 66)
+r20_1.Color = r21_1
+r21_1 = Instance.new("TextButton", r13_1)
+r21_1.Text = "Join Discord"
+local r22_1 = UDim2.new(0, 164, 0, 47)
+r21_1.Size = r22_1
+r22_1 = UDim2.new(0.53, 0, 0.82, 0)
+r21_1.Position = r22_1
+r22_1 = Color3.fromRGB(33, 132, 66)
+r21_1.BackgroundColor3 = r22_1
+r21_1.BackgroundTransparency = 0.8
+r22_1 = Color3.new(1, 1, 1)
+r21_1.TextColor3 = r22_1
+r21_1.Font = Enum.Font.RobotoMono
+r21_1.TextSize = 26
+Instance.new("UICorner", r21_1)
+r22_1 = Instance.new("UIStroke", r21_1)
+local r23_1 = Color3.fromRGB(33, 132, 66)
+r22_1.Color = r23_1
+local r23_1 = function()
+  -- line: [0, 0] id: 2
+  local r0_2 = Instance.new("Sound")
+  r0_2.SoundId = upval_0
+  r0_2.Volume = 2
+  r0_2.Parent = upval_1
+  r0_2:Play()
+  upval_2:AddItem(r0_2, 5)
+  return
+end
+local r24_1 = function(r0_168)
+  -- line: [0, 0] id: 168
+  if not syn then
+    if syn.request then
+    end
+    if request then
+    end
+  end
+  if http_request then
+    return
+  end
+  local r2_168 = upval_0:JSONEncode({hwid = upval_1, key = r0_168})
+  local r4_168 = function()
+    -- line: [0, 0] id: 169
+    return upval_0(r1_169)
+    return 
+  end
+  local r3_168, r4_168 = pcall(r4_168)
+  if not r3_168 then
+    if not r4_168 then
+      if r4_168.StatusCode == 200 then
+        return upval_0:JSONDecode(upval_0, r4_168.Body)
+      end
+    end
+  end
+  return
+end
+local r27_1 = function()
+  -- line: [0, 0] id: 4
+  if upval_0.Text == "" then
+    upval_1:SetCore("SendNotification", {Title = "Empty Key", Text = "Please enter a key.", Duration = 3})
+    return
+  end
+  upval_1:SetCore("SendNotification", {Title = "Checking Key", Text = "Please wait...", Duration = 2})
+  local r1_4 = upval_2(upval_0.Text)
+  if not r1_4 then
+    if not r1_4.valid then
+      upval_3()
+      upval_1:SetCore("SendNotification", {Title = "Access Granted", Text = "Welcome, " .. upval_4.Name, Duration = 4})
+      local r4_4 = upval_5:TweenPosition(0, -1, 0)
+      upval_5:TweenPosition(upval_5, r4_4, "Out", "Back", 1, true)
+      task.wait(1)
+      upval_6:Destroy()
+      upval_7:Destroy()
+      local r2_4 = game:GetService("ReplicatedStorage")
+      script = r2_4.Emotes
+      r2_4 = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZeianRussell/Kavo-UI-Library/main/Movable.source.lua"))
+      r2_4 = r2_4()
+      local r3_4 = r2_4.CreateLib("Emotes Script", "BloodTheme")
+      r4_4 = r3_4:NewTab("Limited Emotes")
+      local r5_4 = r4_4:NewSection("Free Emotes Script")
+      local r6_4 = r4_4:NewSection("Made By Infinite Studio’s")
+      local r7_4 = Instance.new("ScreenGui")
+      r7_4.Name = "ScreenGui"
+      local r8_4 = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+      r7_4.Parent = r8_4
+      r7_4.ResetOnSpawn = false
+      r8_4 = Instance.new("ImageButton")
+      r8_4.Name = "Toggle"
+      r8_4.Parent = r7_4
+      local r9_4 = Color3.fromRGB(0, 0, 0)
+      r8_4.BackgroundColor3 = r9_4
+      r9_4 = UDim2.new(0, 0, 0.454706937, 0)
+      r8_4.Position = r9_4
+      r9_4 = UDim2.new(0, 50, 0, 50)
+      r8_4.Size = r9_4
+      r8_4.Image = "rbxassetid://118398967616157"
+      r8_4.Draggable = true
+      local r11_4 = function()
+        -- line: [0, 0] id: 127
+        upval_0:ToggleUI()
+        return
+      end
+      r8_4.MouseButton1Click:Connect(r11_4)
+      r9_4 = Instance.new("UICorner")
+      r9_4.Name = "Corner"
+      r9_4.Parent = r8_4
+      local r14_4 = function()
+        -- line: [0, 0] id: 9
+        local r0_9 = game:GetService("Players")
+        local r1_9 = game:GetService("TweenService")
+        local r2_9 = game:GetService("ReplicatedStorage")
+        local r5_9 = Instance.new("Animation")
+        r5_9.AnimationId = "rbxassetid://113876851900426"
+        local r6_9 = r0_9.LocalPlayer.Character.Humanoid:LoadAnimation(r5_9)
+        r6_9:Play()
+        local r8_9 = function()
+          -- line: [0, 0] id: 10
+          local r0_10 = Instance.new("Accessory")
+          local r2_10 = math.random(1, 100000)
+          r0_10.Name = "#EmoteHolder_" .. r2_10
+          r0_10.Parent = upval_0
+          r0_10:SetAttribute("EmoteProperty", true)
+          local r1_10 = require(upval_1.Emotes.VFX)
+          r1_10:MainFunction({
+            Character = upval_0,
+            vfxName = "Final Stand",
+            SpecificModule = upval_1.Emotes.VFX,
+            AnimSent = 1.1387685190043e+014,
+            RealBind = r0_10,
+          })
+          return
+        end
+        task.delay(0.1, r8_9)
+        local r8_9 = function()
+          -- line: [0, 0] id: 11
+          if not acc then
+            if not acc.Parent then
+              local r0_11 = workspace.Live:FindFirstChild(workspace.Live)
+              if r0_11 then
+              end
+            end
+            return
+          end
+          local r1_11, r2_11, r3_11 = pairs({SoundId = "rbxassetid://98080224862986", Volume = 0.3})
+          local r6_11 = Instance.new("Sound")
+          r6_11.SoundId = r5_11.SoundId
+          r6_11.Volume = r5_11.Volume
+          r6_11.Looped = true
+          local r7_11 = upval_0:FindFirstChild("Torso")
+          r6_11.Parent = r7_11
+          r6_11:Play()
+          local r9_11 = function()
+            -- line: [0, 0] id: 14
+            local r3_14 = upval_0:Create()
+            local r0_14 = upval_0:Create(upval_0, upval_1, r3_14, {Volume = 0})
+            r0_14:Play()
+            local r2_14 = function()
+              -- line: [0, 0] id: 15
+              if not upval_0 then
+                if not upval_0.Parent then
+                  upval_0:Destroy()
+                end
+              end
+              return
+            end
+            task.delay(0.75, r2_14)
+            return
+          end
+          task.delay(60, r9_11)
+          for r4_11, r5_11 in r1_11 do
+            r1_11 = upval_2.Emotes.VFX.VfxMods.FS.vfx.Aura:Clone()
+            local r2_11, r3_11, r4_11 = pairs(r1_11:GetChildren())
+            r7_11 = upval_0:FindFirstChild(r6_11.Name)
+            if r6_11.Name == "HumanoidRootPart" then
+              local r8_11 = upval_0:FindFirstChild("Torso")
+            end
+            if not r8_11 then
+              local r8_11, r9_11, r10_11 = pairs(r6_11:GetChildren())
+              local r13_11 = r12_11:IsA("ParticleEmitter")
+              if not r13_11 then
+                r12_11.LockedToPart = true
+              end
+              r12_11:SetAttribute("LimitedAura", true)
+              r12_11.Parent = r8_11
+              local r15_11 = function()
+                -- line: [0, 0] id: 13
+                if not upval_0 then
+                  if not upval_0.Parent then
+                    upval_0:Destroy()
+                  end
+                end
+                return
+              end
+              task.delay(65, r15_11)
+              local r15_11 = function()
+                -- line: [0, 0] id: 12
+                local r0_12 = upval_0:IsA("ParticleEmitter")
+                if not r0_12 then
+                  upval_0.Enabled = false
+                end
+                local r0_12, r1_12, r2_12 = pairs(upval_0:GetChildren())
+                r4_12.Enabled = false
+                for r3_12, r4_12 in r0_12 do
+                  return
+              end
+              task.delay(60, r15_11)
+              for r11_11, r12_11 in r8_11 do
+              end
+              for r5_11, r6_11 in r2_11 do
+                r1_11:Destroy()
+                return
+        end
+        task.delay(9, r8_9)
+        return
+      end
+      r6_4:NewButton("Final Stand", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 82
+        local r1_82 = math.random(0, 255)
+        local r2_82 = math.random(0, 255)
+        local r0_82 = Color3.fromRGB()
+        r2_82 = Instance.new("Animation")
+        r2_82.AnimationId = "rbxassetid://96993907314948"
+        local r3_82 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(r2_82)
+        r3_82:Play()
+        local r6_82 = function()
+          -- line: [0, 0] id: 90
+          local r0_90 = Instance.new("Animation")
+          r0_90.AnimationId = "rbxassetid://127234845846317"
+          local r1_90 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(r0_90)
+          r1_90:Play()
+          return
+        end
+        r3_82.Stopped:Connect(r6_82)
+        local r4_82 = Instance.new("Accessory")
+        r6_82 = math.random(1, 100000)
+        r4_82.Name = "#EmoteHolder_" .. r6_82
+        r4_82.Parent = game.Players.LocalPlayer.Character
+        local r5_82 = game:GetService("CollectionService")
+        r5_82:AddTag(r4_82, "emoteendstuff" .. game.Players.LocalPlayer.Character.Name)
+        r5_82 = require(game.ReplicatedStorage.Emotes.VFX)
+        r5_82:MainFunction({
+          Character = game.Players.LocalPlayer.Character,
+          vfxName = "Energy Explosion",
+          AnimSent = 96993907314948,
+          RealBind = r4_82,
+          NoInsertion = true,
+          Colour = r0_82,
+        })
+        local r10_82 = function()
+          -- line: [0, 0] id: 84
+          if not upval_0 then
+            if not upval_0.Parent then
+              local r0_84 = function()
+                -- line: [0, 0] id: 88
+                local r0_88, r1_88, r2_88 = pairs(game.Players.LocalPlayer.Character.FakeHead:GetChildren())
+                local r5_88 = r4_88:IsA("Accessory")
+                if not r5_88 then
+                  r5_88 = r4_88:FindFirstChild("Handle")
+                  if not r5_88 then
+                    r5_88 = r4_88:FindFirstChild("Handle")
+                    r5_88 = r5_88:FindFirstChild("HairAttachment")
+                    if not r5_88 then
+                      r5_88 = r4_88:FindFirstChild("Handle")
+                      table.insert(upval_0, r5_88)
+                      local r6_88, r7_88, r8_88 = pairs(r5_88:GetChildren())
+                      local r11_88 = r10_88:IsA("SpecialMesh")
+                      if not r11_88 then
+                        r10_88:SetAttribute("basetext", r10_88.TextureId)
+                      end
+                      for r9_88, r10_88 in r6_88 do
+                      end
+                    end
+                  end
+                  for r3_88, r4_88 in r0_88 do
+                    local r0_88, r1_88, r2_88 = pairs(upval_0)
+                    r5_88 = r4_88:Clone()
+                    table.insert(upval_1, r5_88)
+                    r6_88 = Instance.new("Weld")
+                    r6_88.Part0 = r5_88
+                    r6_88.Part1 = r4_88
+                    r6_88.Parent = r5_88
+                    r5_88.Parent = game.Workspace.Thrown
+                    r4_88.Transparency = 1
+                    r7_88 = game:GetService("TweenService")
+                    r10_88 = r7_88:Create(Enum.EasingStyle.Sine)
+                    r7_88 = r7_88:Create(r7_88, r4_88, r10_88, {Transparency = 0})
+                    r7_88:Play()
+                    r7_88 = r4_88:FindFirstChildOfClass("SpecialMesh")
+                    if not r7_88 then
+                      r7_88.TextureId = ""
+                      r8_88 = game.ReplicatedStorage.Resources.DeathEffect.Template:Clone()
+                      r9_88 = Color3.new(v3189.R * 5, v3189.G * 5, v3189.B * 5)
+                      r8_88.Color3 = r9_88
+                      r8_88.Parent = r5_88
+                    end
+                    for r3_88, r4_88 in r0_88 do
+                      upval_2[game.Players.LocalPlayer.Character] = r2_88
+                      return
+              end
+              r0_84()
+              local r2_84 = function()
+                -- line: [0, 0] id: 89
+                local r0_89, r1_89, r2_89 = pairs(upval_0)
+                local r5_89 = game:GetService("TweenService")
+                local r8_89 = r5_89:Create()
+                r5_89 = r5_89:Create(r5_89, r4_89, r8_89, {Transparency = 1})
+                r5_89:Play()
+                game.Debris:AddItem(r4_89, 0.5)
+                for r3_89, r4_89 in r0_89 do
+                  local r0_89, r1_89, r2_89 = pairs(upval_1)
+                  r5_89 = game.Players.LocalPlayer.Character:GetAttribute("InMech")
+                  if r5_89 then
+                    r5_89 = game:GetService("TweenService")
+                    r8_89 = r5_89:Create()
+                    r5_89 = r5_89:Create(r5_89, r4_89, r8_89, {Transparency = 0})
+                    r5_89:Play()
+                  end
+                  local r5_89, r6_89, r7_89 = pairs(r4_89:GetChildren())
+                  local r10_89 = r9_89:IsA("SpecialMesh")
+                  if r10_89 then
+                    r10_89 = r9_89:IsA("MeshPart")
+                    if not r10_89 then
+                    end
+                    r10_89 = r9_89:GetAttribute("basetext")
+                    r9_89.TextureId = r10_89
+                  end
+                  for r8_89, r9_89 in r5_89 do
+                    for r3_89, r4_89 in r0_89 do
+                      return
+              end
+              task.delay(200, r2_84)
+              r0_84 = Instance.new("Folder")
+              r0_84.Name = "AuraHolder"
+              r0_84:SetAttribute("LimAura", true)
+              r0_84:SetAttribute("EmoteEffect", true)
+              r0_84.Parent = game.Players.LocalPlayer.Character
+              local r3_84 = function()
+                -- line: [0, 0] id: 85
+                if not upval_0 then
+                  upval_0:Destroy()
+                end
+                return
+              end
+              task.delay(203, r3_84)
+              local r2_84, r3_84, r4_84 = pairs(game.ReplicatedStorage.Emotes.AuraReal:GetChildren())
+              local r7_84 = r6_84:Clone()
+              r7_84:SetAttribute("LimAura", true)
+              table.insert(r1_84, r7_84)
+              local r10_84 = function()
+                -- line: [0, 0] id: 86
+                if not upval_0 then
+                  upval_0:Destroy()
+                end
+                return
+              end
+              task.delay(203, r10_84)
+              local r8_84 = r7_84:IsA("Attachment")
+              if r8_84 then
+                r8_84 = r7_84:IsA("PointLight")
+                if not r8_84 then
+                end
+                r7_84.Parent = game.Players.LocalPlayer.Character.PrimaryPart
+              end
+              r8_84 = Instance.new("Weld")
+              r8_84.Part0 = game.Players.LocalPlayer.Character.PrimaryPart
+              r8_84.Part1 = r7_84
+              r8_84.Parent = r7_84
+              local r8_84, r9_84, r10_84 = pairs(r7_84:GetDescendants())
+              local r13_84 = r12_84:IsA("ParticleEmitter")
+              if r13_84 then
+                r13_84 = r12_84:IsA("PointLight")
+                if not r13_84 then
+                end
+                r12_84.Enabled = false
+                table.insert(upval_4, r12_84)
+                r12_84:SetAttribute("LimitedAura", true)
+                r12_84:SetAttribute("InnerRageAura", true)
+                r13_84 = r12_84:IsA("ParticleEmitter")
+                if r13_84 then
+                  r13_84 = r12_84:IsA("Beam")
+                  if not r13_84 then
+                  end
+                  r13_84 = ColorSequence.new(Color3.new(v3189.R, v3189.G, v3189.B))
+                  r12_84.Color = r13_84
+                end
+                r13_84 = r12_84:IsA("PointLight")
+                if r13_84 then
+                  r13_84 = r12_84:IsA("SpotLight")
+                  if r13_84 then
+                    r13_84 = r12_84:IsA("SurfaceLight")
+                    if not r13_84 then
+                    end
+                  end
+                  r12_84.Brightness = r12_84.Brightness * 1.3
+                  r13_84 = Color3.new(v3189.R * 1.3, v3189.G * 1.3, v3189.B * 1.3)
+                  r12_84.Color = r13_84
+                end
+                local r15_84 = function()
+                  -- line: [0, 0] id: 87
+                  upval_0.Enabled = false
+                  return
+                end
+                task.delay(200, r15_84)
+              end
+              for r11_84, r12_84 in r8_84 do
+                for r5_84, r6_84 in r2_84 do
+                end
+              end
+              return
+        end
+        task.delay(1.3, r10_82)
+        local r10_82 = function()
+          -- line: [0, 0] id: 83
+          if not upval_0 then
+            if not upval_0.Parent then
+              local r0_83, r1_83, r2_83 = pairs(upval_1)
+              r4_83.Enabled = true
+              for r3_83, r4_83 in r0_83 do
+                wait(0.05)
+                local r0_83, r1_83, r2_83 = pairs(game.Players.LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks())
+                if r4_83.Animation.AnimationId == "rbxassetid://127234845846317" then
+                  r4_83:Stop()
+                  local r5_83 = Instance.new("Animation")
+                  r5_83.AnimationId = "rbxassetid://117177504280717"
+                  local r6_83 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(r5_83)
+                  r6_83:Play()
+                end
+                for r3_83, r4_83 in r0_83 do
+                  return
+                end
+              end
+              return
+        end
+        task.delay(5.3, r10_82)
+        return
+      end
+      r6_4:NewButton("Inner Rage", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 42
+        local r0_42 = game:GetService("Players")
+        local r4_42, r5_42, r6_42 = pairs(r3_42)
+        local r11_42 = function()
+          -- line: [0, 0] id: 48
+          local r0_48 = Instance.new("Sound")
+          r0_48.SoundId = upval_0.SoundId
+          if upval_0.Volume then
+          end
+          r0_48.Volume = 1
+          if upval_0.Looped then
+          end
+          r0_48.Looped = false
+          if not upval_0.ParentTorso then
+            local r1_48 = upval_1:FindFirstChild("Torso")
+            if r1_48 then
+            end
+          end
+          r0_48.Parent = workspace
+          r0_48:Play()
+          return
+        end
+        task.delay(r7_42, r11_42)
+        for r7_42, r8_42 in r4_42 do
+          r4_42 = Instance.new("Animation")
+          r5_42 = r0_42.LocalPlayer.Character.Humanoid:LoadAnimation(r4_42)
+          r5_42:Play()
+          local r7_42 = function()
+            -- line: [0, 0] id: 43
+            local r0_43 = Instance.new("Accessory")
+            local r2_43 = math.random(1, 100000)
+            r0_43.Name = "#EmoteHolder_" .. r2_43
+            r0_43.Parent = upval_0
+            local r1_43 = require(game.ReplicatedStorage.Emotes.VFX)
+            r1_43:MainFunction({
+              Character = upval_0,
+              vfxName = "Shadow Eruption",
+              SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+              AnimSent = 1.2103278975654e+014,
+              RealBind = r0_43,
+            })
+            return
+          end
+          task.delay(0.1, r7_42)
+          local r7_42 = function()
+            -- line: [0, 0] id: 44
+            if not upval_0 then
+              if not upval_0.Parent then
+                local r0_44 = workspace.Live:FindFirstChild(workspace.Live)
+                if r0_44 then
+                end
+              end
+              return
+            end
+            r0_44 = Instance.new("Folder")
+            r0_44.Name = "AuraHolder"
+            r0_44.Parent = upval_0
+            local r2_44, r3_44, r4_44 = pairs(script.auraNew:GetChildren())
+            local r7_44 = upval_0:FindFirstChild(r6_44.Name)
+            if not r7_44 then
+              local r8_44 = r6_44:Clone()
+              r8_44.Parent = r0_44
+              r8_44:SetAttribute("LimitedAura", true)
+              local r11_44 = function()
+                -- line: [0, 0] id: 46
+                if not upval_0 then
+                  if not upval_0.Parent then
+                    upval_0:Destroy()
+                  end
+                end
+                return
+              end
+              task.delay(65, r11_44)
+              local r9_44, r10_44, r11_44 = pairs(r8_44:GetDescendants())
+              local r14_44 = r13_44:IsA("Trail")
+              if r14_44 then
+                r14_44 = r13_44:IsA("Beam")
+                if r14_44 then
+                  r14_44 = r13_44:IsA("ParticleEmitter")
+                  if not r14_44 then
+                  end
+                end
+                r13_44.Enabled = true
+                local r16_44 = function()
+                  -- line: [0, 0] id: 47
+                  upval_0.Enabled = false
+                  return
+                end
+                task.delay(60, r16_44)
+              end
+              for r12_44, r13_44 in r9_44 do
+              end
+              for r5_44, r6_44 in r2_44 do
+                r2_44 = Instance.new("Sound")
+                r2_44.SoundId = "rbxassetid://128082194939921"
+                r2_44.Looped = true
+                r2_44.Volume = 1
+                r3_44 = upval_0:FindFirstChild("Torso")
+                r2_44.Parent = r3_44
+                r2_44:Play()
+                game.Debris:AddItem(r2_44, 80)
+                local r5_44 = function()
+                  -- line: [0, 0] id: 45
+                  local r0_45 = game:GetService("TweenService")
+                  local r3_45 = r0_45:Create()
+                  r0_45 = r0_45:Create(r0_45, upval_0, r3_45, {Volume = 0})
+                  r0_45:Play()
+                  game.Debris:AddItem(upval_0, 1.2)
+                  local r0_45, r1_45, r2_45 = pairs(upval_1:GetDescendants())
+                  local r5_45 = r4_45:GetAttribute("aura")
+                  if not r5_45 then
+                    r4_45.Enabled = false
+                    game.Debris:AddItem(r4_45, 5)
+                  end
+                  for r3_45, r4_45 in r0_45 do
+                    return
+                end
+                task.delay(60, r5_44)
+                return
+          end
+          task.delay(8.1, r7_42)
+          return
+      end
+      r6_4:NewButton("Shadow Eruption", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 151
+        local r1_151 = function()
+          -- line: [0, 0] id: 155
+          wait(7.14)
+          if game.Players.LocalPlayer.Character then
+            local r1_155 = game.Players.LocalPlayer.CharacterAdded:Wait()
+          end
+          local r2_155 = game:GetService("ReplicatedStorage")
+          local r3_155 = function()
+            -- line: [0, 0] id: 156
+            local r0_156 = Instance.new("Folder")
+            r0_156.Name = "AuraHolder"
+            r0_156:SetAttribute("DivineForm", true)
+            r0_156:SetAttribute("LimAura", true)
+            r0_156:SetAttribute("EmoteEffect", true)
+            r0_156.Parent = upval_0
+            local r1_156, r2_156, r3_156 = pairs(upval_1:GetChildren())
+            local r6_156 = r5_156:IsA("BasePart")
+            if r6_156 then
+            end
+            r6_156 = upval_0:FindFirstChild(r5_156.Name)
+            if not r6_156 then
+              local r7_156 = r5_156:Clone()
+              r7_156.Transparency = 1
+              r7_156.Massless = true
+              r7_156:SetAttribute("LimAura", true)
+              local r8_156 = tostring(math.random(1, 1000))
+              r7_156.Name = r8_156
+              r7_156.Parent = r0_156
+              r8_156 = Instance.new("Weld")
+              r8_156.Part0 = r6_156
+              r8_156.Part1 = r7_156
+              r8_156.Parent = r7_156
+              local r9_156, r10_156, r11_156 = pairs(r7_156:GetDescendants())
+              local r14_156 = r13_156:IsA("ParticleEmitter")
+              if r14_156 then
+                r14_156 = r13_156:IsA("Beam")
+                if not r14_156 then
+                end
+                r13_156:SetAttribute("LimitedAura", true)
+                local r16_156 = function()
+                  -- line: [0, 0] id: 158
+                  upval_0.Enabled = false
+                  return
+                end
+                task.delay(240, r16_156)
+              end
+              for r12_156, r13_156 in r9_156 do
+                local r11_156 = function()
+                  -- line: [0, 0] id: 157
+                  if not upval_0 then
+                    if not upval_0.Parent then
+                      upval_0:Destroy()
+                    end
+                  end
+                  return
+                end
+                task.delay(244, r11_156)
+              end
+              for r4_156, r5_156 in r1_156 do
+                return
+          end
+          r3_155()
+          return
+        end
+        task.spawn(r1_151)
+        local r0_151 = game:GetService("Players")
+        local r3_151 = Instance.new("Animation")
+        r3_151.AnimationId = "rbxassetid://116187503451999"
+        local r4_151 = r0_151.LocalPlayer.Character.Humanoid:LoadAnimation(r3_151)
+        r4_151:Play()
+        r4_151 = Instance.new("Accessory")
+        local r6_151 = math.random(1, 100000)
+        r4_151.Name = "#EmoteHolder_" .. r6_151
+        r4_151.Parent = r0_151.LocalPlayer.Character
+        r4_151:SetAttribute("EmoteProperty", true)
+        local r5_151 = require(game.ReplicatedStorage.Emotes.VFX)
+        r5_151:MainFunction({
+          Character = r0_151.LocalPlayer.Character,
+          vfxName = "Divine Form",
+          SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+          AnimSent = 1.16187503452e+014,
+          RealBind = r4_151,
+        })
+        local r7_151 = function()
+          -- line: [0, 0] id: 152
+          if not upval_0 then
+            if not upval_0.Parent then
+              local r0_152 = workspace.Live:FindFirstChild(workspace.Live)
+              if r0_152 then
+              end
+            end
+            return
+          end
+          r0_152 = Instance.new("Folder")
+          r0_152.Name = "AuraHolder"
+          r0_152:SetAttribute("DivineForm", true)
+          r0_152:SetAttribute("LimAura", true)
+          r0_152:SetAttribute("EmoteEffect", true)
+          r0_152.Parent = upval_1
+          local r2_152, r3_152, r4_152 = pairs(game.ReplicatedStorage.Emotes.VFX.VfxMods.Evolved.vfx.Folder:GetChildren())
+          local r7_152 = r6_152:IsA("BasePart")
+          if not r7_152 then
+            r7_152 = upval_1:FindFirstChild(r6_152.Name)
+            if not r7_152 then
+              local r8_152 = r6_152:Clone()
+              r8_152.Transparency = 1
+              r8_152.Massless = true
+              local r9_152 = tostring(math.random(1, 1000))
+              r8_152.Name = r9_152
+              r8_152:SetAttribute("LimAura", true)
+              r9_152 = Instance.new("Weld")
+              r9_152.Part0 = r7_152
+              r9_152.Part1 = r8_152
+              r9_152.Parent = r8_152
+              r8_152.Parent = r0_152
+              local r10_152, r11_152, r12_152 = pairs(r8_152:GetDescendants())
+              local r15_152 = r14_152:IsA("ParticleEmitter")
+              if r15_152 then
+                r15_152 = r14_152:IsA("Beam")
+                if not r15_152 then
+                end
+                r14_152:SetAttribute("LimitedAura", true)
+                local r17_152 = function()
+                  -- line: [0, 0] id: 154
+                  upval_0.Enabled = false
+                  return
+                end
+                task.delay(2, r17_152)
+              end
+              for r13_152, r14_152 in r10_152 do
+                local r12_152 = function()
+                  -- line: [0, 0] id: 153
+                  if not upval_0 then
+                    if not upval_0.Parent then
+                      upval_0:Destroy()
+                    end
+                  end
+                  return
+                end
+                task.delay(4, r12_152)
+              end
+            end
+            for r5_152, r6_152 in r2_152 do
+              return
+        end
+        task.delay(7, r7_151)
+        return
+      end
+      r6_4:NewButton("Divine Form", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 25
+        local r0_25 = game:GetService("Players")
+        local r3_25, r4_25, r5_25 = pairs(r2_25)
+        local r10_25 = function()
+          -- line: [0, 0] id: 26
+          local r0_26 = Instance.new("Sound")
+          r0_26.SoundId = upval_0.SoundId
+          if upval_0.Volume then
+          end
+          r0_26.Volume = 1
+          if upval_0.Looped then
+          end
+          r0_26.Looped = false
+          r0_26.Parent = workspace
+          r0_26:Play()
+          return
+        end
+        task.delay(r6_25, r10_25)
+        for r6_25, r7_25 in r3_25 do
+          r3_25 = Instance.new("Animation")
+          r4_25 = r0_25.LocalPlayer.Character.Humanoid:LoadAnimation(r3_25)
+          r4_25:Play()
+          local r6_25 = function()
+            -- line: [0, 0] id: 27
+            local r0_27 = Instance.new("Folder")
+            r0_27.Name = "PrideBind"
+            r0_27.Parent = upval_0
+            r0_27:SetAttribute("EmoteProperty", true)
+            local r1_27 = require(game.ReplicatedStorage.Emotes.VFX)
+            r1_27:MainFunction({
+              Character = upval_0,
+              vfxName = "Boss Raid",
+              SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+              AnimSent = 86505219150915,
+              RealBind = r0_27,
+            })
+            return
+          end
+          task.delay(0.1, r6_25)
+          return
+      end
+      r6_4:NewButton("The Strongest", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 91
+        local r0_91 = game:GetService("Players")
+        local r1_91 = game:GetService("TweenService")
+        local r2_91 = game:GetService("ReplicatedStorage")
+        local r3_91 = game:GetService("Debris")
+        local r6_91 = Instance.new("Animation")
+        r6_91.AnimationId = "rbxassetid://107649573628906"
+        local r7_91 = r0_91.LocalPlayer.Character.Humanoid:LoadAnimation(r6_91)
+        r7_91:Play()
+        local r11_91 = function()
+          -- line: [0, 0] id: 96
+          local r0_96 = Instance.new("Accessory")
+          upval_0 = r0_96
+          local r2_96 = math.random(1, 100000)
+          upval_0.Name = "#EmoteHolder_" .. r2_96
+          upval_0.Parent = upval_1
+          upval_0:SetAttribute("EmoteProperty", true)
+          r0_96 = require(upval_2.Emotes.VFX)
+          r0_96:MainFunction({
+            Character = upval_1,
+            vfxName = "Boundless Rage",
+            SpecificModule = upval_2.Emotes.VFX,
+            AnimSent = 1.0764957362891e+014,
+            RealBind = upval_0,
+          })
+          r0_96 = Instance.new("Folder")
+          upval_3 = r0_96
+          upval_3.Name = "NoRotate"
+          upval_3.Parent = upval_1
+          upval_3:SetAttribute("EmoteProperty", true)
+          return
+        end
+        task.delay(0.1, r11_91)
+        local r11_91 = function()
+          -- line: [0, 0] id: 92
+          if not upval_0 then
+            if not upval_0.Parent then
+              local r0_92 = workspace.Live:FindFirstChild(workspace.Live)
+              if r0_92 then
+              end
+            end
+            return
+          end
+          r0_92 = upval_1.Emotes.VFX.VfxMods.Boundless.vfx.AuraChar:Clone()
+          upval_2:AddItem(r0_92, 5)
+          if not upval_3 then
+            if not upval_3.Parent then
+              upval_3:Destroy()
+            end
+          end
+          local r1_92 = Instance.new("Sound")
+          r1_92.SoundId = "rbxassetid://81055990581650"
+          local r2_92 = upval_0:FindFirstChild("Torso")
+          r1_92.Parent = r2_92
+          r1_92.Looped = true
+          r1_92.Volume = 1
+          r1_92.Name = "CrushEmoteAmbience"
+          r1_92:Play()
+          local r2_92, r3_92, r4_92 = pairs(r0_92:GetChildren())
+          local r7_92 = r6_92:IsA("BasePart")
+          if not r7_92 then
+            r7_92 = upval_0:FindFirstChild(r6_92.Name)
+            local r8_92, r9_92, r10_92 = pairs(r6_92:GetChildren())
+            if not r7_92 then
+              local r13_92 = r12_92:IsA("Attachment")
+              if r13_92 then
+                r13_92 = r12_92:IsA("ParticleEmitter")
+                if not r13_92 then
+                end
+                r13_92 = r12_92:Clone()
+                r13_92.Parent = r7_92
+                r13_92:SetAttribute("LimitedAura", true)
+                local r16_92 = function()
+                  -- line: [0, 0] id: 94
+                  local r3_94 = upval_0:Create()
+                  local r0_94 = upval_0:Create(upval_0, upval_1, r3_94, {Volume = 0})
+                  r0_94:Play()
+                  local r2_94 = function()
+                    -- line: [0, 0] id: 95
+                    if not upval_0 then
+                      if not upval_0.Parent then
+                        upval_0:Destroy()
+                      end
+                    end
+                    return
+                  end
+                  task.delay(0.75, r2_94)
+                  r0_94 = upval_2:IsA("ParticleEmitter")
+                  if not r0_94 then
+                    upval_2.Enabled = false
+                  end
+                  local r0_94, r1_94, r2_94 = pairs(upval_2:GetChildren())
+                  r4_94.Enabled = false
+                  for r3_94, r4_94 in r0_94 do
+                    return
+                end
+                task.delay(60, r16_92)
+                local r16_92 = function()
+                  -- line: [0, 0] id: 93
+                  if not upval_0 then
+                    if not upval_0.Parent then
+                      upval_0:Destroy()
+                    end
+                  end
+                  return
+                end
+                task.delay(65, r16_92)
+              end
+            end
+            for r11_92, r12_92 in r8_92 do
+            end
+            for r5_92, r6_92 in r2_92 do
+              r0_92:Destroy()
+              return
+        end
+        task.delay(4, r11_91)
+        return
+      end
+      r6_4:NewButton("Boundless Rage", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 76
+        local r0_76 = game:GetService("Players")
+        local r1_76 = game:GetService("ReplicatedStorage")
+        local r4_76 = Instance.new("Animation")
+        r4_76.AnimationId = "rbxassetid://133818134745501"
+        local r5_76 = r0_76.LocalPlayer.Character.Humanoid:LoadAnimation(r4_76)
+        r5_76:Play()
+        local r7_76 = function()
+          -- line: [0, 0] id: 77
+          local r0_77 = upval_0:FindFirstChild("DismantleEffect")
+          if not r0_77 then
+            r0_77:Destroy()
+          end
+          local r1_77 = Instance.new("Accessory")
+          r1_77.Name = "DismantleEffect"
+          r1_77.Parent = upval_0
+          r1_77:SetAttribute("EmoteEffect", true)
+          local r2_77 = require(upval_1.Emotes.VFX)
+          r2_77:MainFunction({
+            Character = upval_0,
+            vfxName = "Pride",
+            SpecificModule = upval_1.Emotes.VFX,
+            AnimSent = 1.338181347455e+014,
+            RealBind = r1_77,
+            CanRotate = true,
+          })
+          r2_77 = Instance.new("Sound")
+          r2_77.SoundId = "rbxassetid://93369149563360"
+          r2_77.Volume = 2
+          r2_77.Looped = false
+          local r3_77 = upval_0:FindFirstChild("Torso")
+          r2_77.Parent = r3_77
+          r2_77:Play()
+          return
+        end
+        task.delay(0.1, r7_76)
+        return
+      end
+      r6_4:NewButton("The Fallen", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 116
+        local r0_116 = game:GetService("Players")
+        local r1_116 = game:GetService("ReplicatedStorage")
+        local r4_116 = game:GetService("CollectionService")
+        local r5_116 = Instance.new("Animation")
+        r5_116.AnimationId = "rbxassetid://103668868712897"
+        local r6_116 = r0_116.LocalPlayer.Character.Humanoid:LoadAnimation(r5_116)
+        r6_116:Play()
+        local r8_116 = function()
+          -- line: [0, 0] id: 117
+          local r0_117 = Instance.new("Accessory")
+          local r2_117 = math.random(1, 100000)
+          r0_117.Name = "#EmoteHolder_" .. r2_117
+          r0_117.Parent = upval_0
+          upval_1:AddTag(r0_117, "emoteendstuff" .. upval_0.Name)
+          local r1_117 = require(upval_2.Emotes.VFX)
+          r1_117:MainFunction({
+            Character = upval_0,
+            vfxName = "True Aura",
+            SpecificModule = upval_2.Emotes.VFX,
+            AnimSent = 1.036688687129e+014,
+            RealBind = r0_117,
+          })
+          r2_117 = tostring(upval_0)
+          if r2_117 == "YungCrepetics" then
+            local r4_117 = function()
+              -- line: [0, 0] id: 118
+              if not upval_0 then
+                if not upval_0.Parent then
+                  local r0_118, r1_118, r2_118 = pairs(workspace:GetPartBoundsInRadius(upval_1.Position, 40))
+                  local r5_118 = 40:GetAttribute("IsTree")
+                  if r5_118 then
+                    if 40.Name ~= "TreeRoot" then
+                    end
+                    if not false then
+                    end
+                    local r6_118 = 40.Parent:FindFirstChildOfClass("Humanoid")
+                    if not r6_118 then
+                      if r6_118.Name ~= "FakeHumanoid" then
+                        if r6_118 ~= upval_2.Humanoid then
+                        end
+                      end
+                    end
+                    for r3_118, r4_118 in r0_118 do
+                    end
+                  end
+                  return
+            end
+            task.delay(6.3, r4_117)
+          end
+          r2_117 = Instance.new("Sound")
+          r2_117.SoundId = "rbxassetid://83049960731792"
+          r2_117.Volume = 3
+          r2_117.Looped = false
+          local r3_117 = upval_0:FindFirstChild("Torso")
+          r2_117.Parent = r3_117
+          r2_117:Play()
+          return
+        end
+        task.delay(0.1, r8_116)
+        return
+      end
+      r6_4:NewButton("True Aura", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 128
+        local r1_128 = function()
+          -- line: [0, 0] id: 150
+          local r0_150 = game:GetService("Players")
+          if r0_150.LocalPlayer.Character then
+            local r2_150 = r0_150.LocalPlayer.CharacterAdded:Wait()
+          end
+          local r3_150 = r2_150:WaitForChild("Humanoid")
+          local r4_150 = Instance.new("Animation")
+          r4_150.AnimationId = "rbxassetid://100255267749203"
+          local r5_150 = r3_150:LoadAnimation(r4_150)
+          r5_150:Play()
+          local r6_150 = Instance.new("Sound")
+          r6_150.SoundId = "rbxassetid://79605009444651"
+          r6_150.Volume = 0
+          local r7_150 = r2_150:FindFirstChild("HumanoidRootPart")
+          if r7_150 then
+          end
+          r6_150.Parent = r2_150.PrimaryPart
+          r6_150:Play()
+          r7_150 = Instance.new("Folder")
+          r7_150.Name = "RuthlessBind"
+          r7_150.Parent = r2_150
+          r7_150:SetAttribute("EmoteProperty", true)
+          local r8_150 = require(game.ReplicatedStorage.Emotes.VFX)
+          r8_150:MainFunction({
+            Character = r2_150,
+            vfxName = "Eternal Seal",
+            SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+            AnimSent = 1.002552677492e+014,
+            RealBind = r7_150,
+          })
+          return
+        end
+        task.spawn(r1_128)
+        if game.Players.LocalPlayer.Character then
+          r1_128 = game.Players.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_128 = r1_128:WaitForChild("HumanoidRootPart")
+        local r4_128 = Instance.new("Sound")
+        r4_128.SoundId = r3_128.SoundId
+        r4_128.Volume = r3_128.Volume
+        if not r3_128.ParentTorso then
+          if r2_128 then
+          end
+        end
+        r4_128.Parent = workspace
+        r4_128:Play()
+        local r5_128 = game:GetService("TweenService")
+        local r6_128 = game:GetService("CollectionService")
+        local r7_128 = game:GetService("ReplicatedStorage")
+        local r8_128 = game:GetService("Players")
+        local r9_128 = game:GetService("Workspace")
+        if r8_128.LocalPlayer.Character then
+          local r11_128 = r8_128.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r12_128 = r9_128:FindFirstChild("Thrown")
+        if r12_128 then
+          r12_128 = Instance.new("Folder", r9_128)
+        end
+        r12_128.Name = "Thrown"
+        local r14_128 = function(r0_147)
+          -- line: [0, 0] id: 147
+          r0_147:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_147)
+          upval_1:AddTag(r0_147, "emoteendstuff" .. upval_2.Name)
+          r0_147.Parent = upval_3
+          return
+        end
+        local r15_128 = r7_128.Emotes.PrisonRealmRig:Clone()
+        local r16_128 = r7_128.Emotes.RealmPrism:Clone()
+        local r17_128 = r7_128.Emotes.Strings:Clone()
+        r14_128(r15_128)
+        r14_128(r16_128)
+        r14_128(r17_128)
+        local r18_128, r19_128, r20_128 = pairs({})
+        unpack(r17_128:GetChildren()).PrimaryPart.Anchored = false
+        local r23_128 = Instance.new("Weld")
+        r23_128.Part0 = r11_128.PrimaryPart
+        r23_128.Part1 = unpack(r17_128:GetChildren()).PrimaryPart
+        local r24_128 = unpack(r17_128:GetChildren()):GetAttribute("Offset")
+        r23_128.C0 = r24_128
+        r23_128.Parent = unpack(r17_128:GetChildren()).PrimaryPart
+        for r21_128, r22_128 in r18_128 do
+          r18_128 = Instance.new("Sound")
+          r18_128.SoundId = "rbxassetid://116434570262349"
+          r18_128.Volume = 2
+          r19_128 = r15_128:FindFirstChild("Bone_L", true)
+          r18_128.Parent = r19_128
+          r18_128:Play()
+          local r19_128 = function(r0_141, r1_141)
+            -- line: [0, 0] id: 141
+            local r2_141 = Instance.new("Animation")
+            r2_141.AnimationId = "rbxassetid://" .. r1_141
+            local r3_141 = r0_141:FindFirstChild("AnimationController")
+            if not r3_141 then
+              r3_141 = r0_141.AnimationController:LoadAnimation(r2_141)
+              if r3_141 then
+              end
+              r3_141 = r0_141:FindFirstChildOfClass("Humanoid")
+              r3_141 = r3_141:LoadAnimation(r2_141)
+            end
+            r3_141:Play()
+            table.insert(upval_0, r3_141)
+            return
+          end
+          r19_128(r15_128, 1.3293184205138e+014)
+          r19_128(r16_128, 73313263538976)
+          local r21_128, r22_128, r23_128 = pairs(r20_128)
+          r19_128(r17_128["String" .. 1.0661312968511e+014], 85535076926939)
+          for r24_128, r25_128 in r21_128 do
+            local r22_128, r23_128, r24_128 = pairs(r21_128)
+            if not r15_128.Sphere_001 then
+              r15_128.Sphere_001.Transparency = 1
+              local r27_128 = r15_128.Sphere_001:IsA("BasePart")
+              if not r27_128 then
+                r27_128 = Vector3.new(0.01, 0.01, 0.01)
+                r15_128.Sphere_001.Size = r27_128
+              end
+            end
+            for r25_128, r26_128 in r22_128 do
+              local r24_128 = function()
+                -- line: [0, 0] id: 138
+                if not upval_0.Parent then
+                  upval_0.RootPart.PrismRootPart.Talisman.ParticleEmitter:Emit(1)
+                end
+                return
+              end
+              task.delay(3.667, r24_128)
+              local r22_128 = function(r0_146, r1_146, r2_146)
+                -- line: [0, 0] id: 146
+                if r2_146 then
+                  local r6_146 = upval_0:Create(Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+                end
+                local r3_146 = upval_0:Create(upval_0, r0_146, r6_146, r1_146)
+                r3_146:Play()
+                return
+              end
+              local r25_128 = function()
+                -- line: [0, 0] id: 144
+                upval_0(upval_1.RealmPrismPart, {Transparency = 0})
+                return
+              end
+              task.delay(9.15, r25_128)
+              local r25_128 = function()
+                -- line: [0, 0] id: 149
+                local r3_149 = Vector3.new(3.34, 3.31, 3.32)
+                upval_0(upval_1.RealmPrismPart, {Size = r3_149})
+                return
+              end
+              task.delay(9.166, r25_128)
+              local r25_128 = function()
+                -- line: [0, 0] id: 129
+                local r3_129 = Vector3.new(1.67, 1.66, 1.66)
+                upval_0(upval_1.RealmPrismPart)
+                return
+              end
+              task.delay(9.183, r25_128)
+              local r25_128 = function()
+                -- line: [0, 0] id: 139
+                local r3_139 = Vector3.new(1.06, 2, 1.057)
+                upval_0(upval_1.RealmPrismPart)
+                return
+              end
+              task.delay(9.233, r25_128)
+              local r25_128 = function()
+                -- line: [0, 0] id: 145
+                local r3_145 = Vector3.new(0.5, 0.5, 0.5)
+                upval_0(upval_1.RealmPrismPart)
+                return
+              end
+              task.delay(9.35, r25_128)
+              local r25_128 = function()
+                -- line: [0, 0] id: 133
+                upval_0(upval_1.RealmPrismPart)
+                return
+              end
+              task.delay(9.633, r25_128)
+              local r25_128 = function()
+                -- line: [0, 0] id: 132
+                upval_0(upval_1.RealmPrismPart, {Transparency = 1})
+                return
+              end
+              task.delay(13.283, r25_128)
+              local r24_128, r25_128, r26_128 = pairs(r23_128)
+              local r31_128 = function()
+                -- line: [0, 0] id: 130
+                local r3_130 = Vector3.new(0.01, 0.01, 0.01)
+                upval_0(upval_1, {Transparency = 0, Size = r3_130})
+                return
+              end
+              task.delay(6.85, r31_128)
+              local r31_128 = function()
+                -- line: [0, 0] id: 137
+                local r3_137 = Vector3.new(1.71, 1.69, 1.69)
+                upval_0(upval_1)
+                return
+              end
+              task.delay(6.866, r31_128)
+              local r31_128 = function()
+                -- line: [0, 0] id: 131
+                local r3_131 = Vector3.new(1.71, 1.69, 1.69)
+                upval_0(upval_1)
+                return
+              end
+              task.delay(7.183, r31_128)
+              local r31_128 = function()
+                -- line: [0, 0] id: 135
+                upval_0(upval_1)
+                return
+              end
+              task.delay(9.1, r31_128)
+              local r31_128 = function()
+                -- line: [0, 0] id: 142
+                local r3_142 = Vector3.new(0.01, 0.01, 0.01)
+                upval_0(upval_1, {Transparency = 1, Size = r3_142})
+                return
+              end
+              task.delay(9.216, r31_128)
+              for r27_128, r28_128 in r24_128 do
+                local r27_128 = function()
+                  -- line: [0, 0] id: 140
+                  local r0_140, r1_140, r2_140 = pairs(upval_0)
+                  upval_1(r4_140, {Transparency = 0})
+                  for r3_140, r4_140 in r0_140 do
+                    return
+                end
+                task.delay(0.4, r27_128)
+                local r27_128 = function()
+                  -- line: [0, 0] id: 134
+                  local r3_134 = Vector3.new(1.176, 1.181, 0.518)
+                  upval_0(upval_1.OPEN)
+                  r3_134 = Vector3.new(1.568, 1.568, 0.41)
+                  upval_0(upval_1.Cube_finals)
+                  r3_134 = Vector3.new(1.568, 1.568, 0.661)
+                  upval_0(upval_1.Cube_2)
+                  r3_134 = Vector3.new(0.549, 0.549, 0.549)
+                  upval_0(upval_1.Sphere_001)
+                  r3_134 = Vector3.new(0.489, 0.439, 0.201)
+                  upval_0(upval_1.CIRCLE_001)
+                  return
+                end
+                task.delay(0.416, r27_128)
+                local r27_128 = function()
+                  -- line: [0, 0] id: 143
+                  upval_0(upval_1.Talismanmesh, {Transparency = 1})
+                  local r3_143 = Vector3.new(7.461, 7.494, 2.774)
+                  upval_0(upval_1.OPEN)
+                  r3_143 = Vector3.new(10.256, 10.256, 2)
+                  upval_0(upval_1.Cube_finals)
+                  r3_143 = Vector3.new(10.256, 10.256, 3.788)
+                  upval_0(upval_1.Cube_2)
+                  r3_143 = Vector3.new(2.997, 2.997, 2.997)
+                  upval_0(upval_1.Sphere_001)
+                  r3_143 = Vector3.new(2.565, 2.211, 0.513)
+                  upval_0(upval_1.CIRCLE_001)
+                  wait(2.2)
+                  upval_1:Destroy()
+                  return
+                end
+                task.delay(4.55, r27_128)
+                r25_128 = game:GetService("Players")
+                r26_128 = game:GetService("RunService")
+                if r25_128.LocalPlayer.Character then
+                  r28_128 = r25_128.LocalPlayer.CharacterAdded:Wait()
+                end
+                local r29_128 = function(r0_148)
+                  -- line: [0, 0] id: 148
+                  local r1_148, r2_148, r3_148 = pairs(r0_148:GetDescendants())
+                  local r6_148 = r5_148:IsA("BasePart")
+                  if not r6_148 then
+                    if not r5_148.Anchored then
+                      r5_148.Anchored = false
+                    end
+                  end
+                  for r4_148, r5_148 in r1_148 do
+                    return
+                end
+                local r32_128 = function()
+                  -- line: [0, 0] id: 136
+                  if not upval_0 then
+                    if not upval_0.Parent then
+                      upval_1(upval_0)
+                    end
+                  end
+                  return
+                end
+                r26_128.RenderStepped:Connect(r32_128)
+                return
+      end
+      r6_4:NewButton("Eternal Seal", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 67
+        local r0_67 = game:GetService("Players")
+        local r1_67 = game:GetService("ReplicatedStorage")
+        local r2_67 = game:GetService("TweenService")
+        local r3_67 = game:GetService("Debris")
+        local r6_67 = Instance.new("Animation")
+        r6_67.AnimationId = "rbxassetid://120001337057214"
+        local r7_67 = r0_67.LocalPlayer.Character.Humanoid:LoadAnimation(r6_67)
+        r7_67:Play()
+        local r10_67 = function()
+          -- line: [0, 0] id: 68
+          local r0_68 = Instance.new("Accessory")
+          local r2_68 = math.random(1, 100000)
+          r0_68.Name = "#EmoteHolder_" .. r2_68
+          r0_68.Parent = upval_0
+          r0_68:SetAttribute("EmoteProperty", true)
+          local r1_68 = require(upval_1.Emotes.VFX)
+          r1_68:MainFunction({
+            Character = upval_0,
+            vfxName = "HugeSlash",
+            SpecificModule = upval_1.Emotes.VFX,
+            AnimSent = 1.2000133705721e+014,
+            RealBind = r0_68,
+            CanRotate = true,
+          })
+          r2_68 = upval_2:GetMarkerReachedSignal("fifth")
+          local r4_68 = function()
+            -- line: [0, 0] id: 69
+            if not upval_0 then
+              if upval_0.Parent then
+              end
+              return
+            end
+            upval_1:SetAttribute("ForcedCFrame", upval_1.PrimaryPart.CFrame)
+            local r1_69 = Instance.new("Part")
+            local r2_69 = Vector3.new(55, 35, 10)
+            r1_69.Size = r2_69
+            r1_69.Transparency = 1
+            r2_69 = BrickColor.new("Really red")
+            r1_69.BrickColor = r2_69
+            r1_69.Anchored = true
+            r1_69.CanCollide = false
+            r1_69.CanQuery = false
+            r1_69.CanTouch = false
+            r2_69 = CFrame.new(0, -10, -4)
+            r1_69.CFrame = upval_1.PrimaryPart.CFrame * r2_69
+            r2_69 = workspace:FindFirstChild("Thrown")
+            if r2_69 then
+            end
+            r1_69.Parent = workspace
+            upval_2:AddItem(r1_69, 1)
+            local r5_69 = upval_3:Create(Enum.EasingStyle.Linear)
+            local r7_69 = CFrame.new(0, -10, -114)
+            r2_69 = upval_3:Create(upval_3, r1_69, r5_69, {CFrame = upval_1.PrimaryPart.CFrame * r7_69})
+            r2_69:Play()
+            local r3_69 = function()
+              -- line: [0, 0] id: 70
+              local r1_70, r2_70, r3_70 = pairs(workspace:GetPartsInPart(workspace))
+              local r6_70 = workspace:GetPartsInPart().Parent:FindFirstChildOfClass("Humanoid")
+              local r7_70 = workspace:GetPartsInPart().Parent:FindFirstChildOfClass("ForceField")
+              if not r6_70 then
+                if r6_70.Name ~= "FakeHumanoid" then
+                  if r7_70 then
+                    if r6_70 ~= upval_1.Humanoid then
+                      local r8_70 = table.find(upval_2, r6_70.Parent)
+                      if r8_70 then
+                        table.insert(r0_70, r6_70.Parent)
+                        table.insert(upval_2, r6_70.Parent)
+                      end
+                    end
+                  end
+                end
+              end
+              for r4_70, r5_70 in r1_70 do
+                return r0_70
+            end
+            local r4_69 = tick()
+            r5_69 = task.wait()
+            if not r5_69 then
+              if not r1_69 then
+                if not r1_69.Parent then
+                  if not upval_0 then
+                    if not upval_0.Parent then
+                      r5_69 = tick()
+                      if r5_69 - r4_69 <= 1 then
+                        r5_69 = r3_69()
+                        local r6_69, r7_69, r8_69 = pairs(r5_69)
+                        local r11_69 = -114:FindFirstChild("Humanoid")
+                        local r12_69 = -114:FindFirstChild("HumanoidRootPart")
+                        if not r11_69 then
+                          if r11_69.Health <= 0 then
+                            if not r12_69 then
+                              local r13_69 = shared.sfx({SoundId = "rbxassetid://74053599625174", Volume = 5, CFrame = r12_69.CFrame})
+                              r13_69:Play()
+                              local r13_69, r14_69, r15_69 = pairs(-114:GetDescendants())
+                              local r18_69 = r17_69:IsA("BallSocketConstraint")
+                              if r18_69 then
+                                r18_69 = r17_69:IsA("Weld")
+                                if not r18_69 then
+                                end
+                                r17_69:Destroy()
+                              end
+                              for r16_69, r17_69 in r13_69 do
+                              end
+                            end
+                          end
+                          for r9_69, r10_69 in r6_69 do
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+                return
+          end
+          r2_68 = r2_68:Once(r4_68)
+          local r4_68 = function()
+            -- line: [0, 0] id: 71
+            if not upval_0 then
+              upval_0:Disconnect()
+            end
+            return
+          end
+          task.delay(4, r4_68)
+          r2_68 = Instance.new("Sound")
+          r2_68.SoundId = "rbxassetid://103835306879590"
+          r2_68.Volume = 3
+          r2_68.Looped = false
+          local r3_68 = upval_0:FindFirstChild("Torso")
+          if r3_68 then
+          end
+          r2_68.Parent = upval_0.PrimaryPart
+          r2_68:Play()
+          return
+        end
+        task.delay(0.1, r10_67)
+        return
+      end
+      r6_4:NewButton("World Cutting Slash", "Limited Emote", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 72
+        local r0_72 = game:GetService("Players")
+        local r1_72 = game:GetService("ReplicatedStorage")
+        if r0_72.LocalPlayer.Character then
+          local r3_72 = r0_72.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_72 = r3_72:WaitForChild("Humanoid")
+        local r5_72 = Instance.new("Animation")
+        r5_72.AnimationId = "rbxassetid://129361308786827"
+        local r6_72 = r4_72:LoadAnimation(r5_72)
+        r6_72:Play()
+        r6_72 = Instance.new("Accessory")
+        local r8_72 = math.random(1, 100000)
+        r6_72.Name = "#EmoteHolder_" .. r8_72
+        r6_72.Parent = r3_72
+        r6_72:SetAttribute("EmoteProperty", true)
+        local r7_72 = require(r1_72.Emotes.VFX)
+        r7_72:MainFunction({
+          Character = r3_72,
+          vfxName = "Final Spark",
+          SpecificModule = r1_72.Emotes.VFX,
+          AnimSent = 1.2936130878683e+014,
+          RealBind = r6_72,
+        })
+        return
+      end
+      r6_4:NewButton("Final Spark", "Free Emotes", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 28
+        local r0_28 = game:GetService("Players")
+        local r1_28 = game:GetService("ReplicatedStorage")
+        if r0_28.LocalPlayer.Character then
+          local r3_28 = r0_28.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_28 = r3_28:WaitForChild("Humanoid")
+        local r5_28 = Instance.new("Animation")
+        r5_28.AnimationId = "rbxassetid://113450724032380"
+        local r6_28 = r4_28:LoadAnimation(r5_28)
+        r6_28:Play()
+        r6_28 = Instance.new("Accessory")
+        local r8_28 = math.random(1, 100000)
+        r6_28.Name = "#EmoteHolder_" .. r8_28
+        r6_28.Parent = r3_28
+        r6_28:SetAttribute("EmoteProperty", true)
+        local r7_28 = require(r1_28.Emotes.VFX)
+        r7_28:MainFunction({
+          Character = r3_28,
+          vfxName = "Last Will",
+          SpecificModule = r1_28.Emotes.VFX,
+          AnimSent = 1.1345072403238e+014,
+          RealBind = r6_28,
+        })
+        return
+      end
+      r6_4:NewButton("Last Will", "Free Emotes", r14_4)
+      local r14_4 = function()
+        -- line: [0, 0] id: 160
+        local r0_160 = game:GetService("Players")
+        if r0_160.LocalPlayer.Character then
+          local r2_160 = r0_160.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r3_160 = r2_160:WaitForChild("Torso")
+        if r3_160 then
+          r3_160 = r2_160:WaitForChild("UpperTorso")
+        end
+        local r11_160 = Instance.new("Sound")
+        r11_160.SoundId = r10_160.SoundId
+        if r10_160.Volume then
+        end
+        r11_160.Volume = 1
+        if r10_160.Looped then
+        end
+        r11_160.Looped = false
+        if not r10_160.ParentTorso then
+          if r3_160 then
+          end
+        end
+        r11_160.Parent = workspace
+        r11_160:Play()
+        for r9_160, r10_160 in next do
+          local r6_160 = Instance.new("Sound")
+          r6_160.SoundId = "rbxassetid://87401852788032"
+          r6_160.Volume = 1
+          r6_160.Parent = workspace
+          r6_160:Play()
+          local r7_160 = game:GetService("Players")
+          local r8_160 = game:GetService("ReplicatedStorage")
+          if r7_160.LocalPlayer.Character then
+            r10_160 = r7_160.LocalPlayer.CharacterAdded:Wait()
+          end
+          r11_160 = r10_160:WaitForChild("Humanoid")
+          local r12_160 = Instance.new("Animation")
+          r12_160.AnimationId = "rbxassetid://95171537920426"
+          local r13_160 = r11_160:LoadAnimation(r12_160)
+          r13_160:Play()
+          r13_160 = Instance.new("Accessory")
+          local r15_160 = math.random(1, 100000)
+          r13_160.Name = "#EmoteHolder_" .. r15_160
+          r13_160.Parent = r10_160
+          r13_160:SetAttribute("EmoteProperty", true)
+          local r14_160 = require(r8_160.Emotes.VFX)
+          r14_160:MainFunction({
+            Character = r10_160,
+            vfxName = "slice combo",
+            SpecificModule = r8_160.Emotes.VFX,
+            AnimSent = 95171537920426,
+            RealBind = r13_160,
+          })
+          return
+      end
+      r6_4:NewButton("The Fallen Finisher", "Free Emotes", r14_4)
+      local r10_4 = game:GetService("ReplicatedStorage")
+      ReplicatedStorage = r10_4
+      local r14_4 = function()
+        -- line: [0, 0] id: 5
+        local r0_5 = game:GetService("Players")
+        local r1_5 = game:GetService("ReplicatedStorage")
+        local r2_5 = r1_5:WaitForChild("Replication")
+        if r0_5.LocalPlayer.Character then
+          local r4_5 = r0_5.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r5_5 = r1_5.Emotes.RockThrow:Clone()
+        r5_5:SetAttribute("EmoteProperty", true)
+        r5_5.Name = "Rock"
+        r5_5.Parent = r4_5
+        local r6_5 = r5_5:WaitForChild("Rock")
+        r6_5:SetAttribute("EmoteProperty", true)
+        r6_5.Name = "Rock"
+        r6_5.Part0 = r4_5.PrimaryPart
+        r6_5.Part1 = r5_5
+        r6_5.Parent = r4_5.PrimaryPart
+        local r10_5 = function()
+          -- line: [0, 0] id: 8
+          if not upval_0 then
+            if not upval_0.Parent then
+              local r0_8 = Instance.new("Sound")
+              r0_8.SoundId = "rbxassetid://91571189388577"
+              r0_8.Volume = 1
+              r0_8.RollOffMaxDistance = 100
+              r0_8.Parent = upval_0
+              r0_8:Play()
+            end
+          end
+          return
+        end
+        task.delay(0.573, r10_5)
+        local r8_5 = Instance.new("Animation")
+        r8_5.AnimationId = "rbxassetid://123464270068243"
+        local r9_5 = r4_5:WaitForChild("Humanoid")
+        r9_5 = r9_5:LoadAnimation(r8_5)
+        r9_5:Play()
+        r10_5 = r4_5:FindFirstChild("Torso")
+        if r10_5 then
+          r10_5 = r4_5:FindFirstChild("UpperTorso")
+        end
+        if not r10_5 then
+          local r11_5 = Instance.new("Sound")
+          r11_5.SoundId = "rbxassetid://104813362309681"
+          r11_5.Volume = 1
+          r11_5.Parent = r10_5
+          r11_5:Play()
+          local r14_5 = function()
+            -- line: [0, 0] id: 6
+            local r0_6 = Instance.new("Sound")
+            r0_6.SoundId = "rbxassetid://103206475338370"
+            r0_6.Volume = 0.8
+            r0_6.Parent = upval_0
+            r0_6:Play()
+            return
+          end
+          task.delay(0.01, r14_5)
+        end
+        local r12_5, r13_5, r14_5 = pairs(r0_5:GetPlayers())
+        if r16_5 ~= r0_5.LocalPlayer then
+          table.insert(r11_5, r16_5)
+        end
+        for r15_5, r16_5 in r12_5 do
+          if 0 < #r11_5 then
+            r13_5 = math.random(1, #r11_5)
+          end
+          r13_5 = workspace:FindFirstChild("Live")
+          if not r13_5 then
+            r13_5 = workspace.Live:FindFirstChild("Weakest Dummy")
+          end
+          if not r13_5 then
+            r14_5 = r13_5:IsA("Model")
+            if not r14_5 then
+            end
+          end
+          task.wait(2.4)
+          local r13_5, r14_5, r15_5 = pairs(getconnections(r2_5.OnClientEvent))
+          if not table.insert.Function then
+            local r19_5 = function()
+              -- line: [0, 0] id: 7
+              upval_0.Function({Effect = "Best Brother", char = upval_1, Id = upval_2})
+              return
+            end
+            pcall(r19_5)
+          end
+          for r16_5, r17_5 in r13_5 do
+            r7_5.rock.Transparency = 1
+            return
+      end
+      r6_4:NewButton("My Brother", "Free Emotes", r14_4)
+      r10_4 = r3_4:NewTab("Free Emotes")
+      r11_4 = r10_4:NewSection("Emotes")
+      local r12_4 = r10_4:NewSection("Made By Infinite Studio’s")
+      local r17_4 = function()
+        -- line: [0, 0] id: 166
+        local r0_166 = game:GetService("Players")
+        local r1_166 = game:GetService("ReplicatedStorage")
+        if r0_166.LocalPlayer.Character then
+          local r3_166 = r0_166.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_166 = r3_166:WaitForChild("Humanoid")
+        local r5_166 = Instance.new("Animation")
+        r5_166.AnimationId = "rbxassetid://83905432418191"
+        local r6_166 = r4_166:LoadAnimation(r5_166)
+        r6_166:Play()
+        r6_166 = Instance.new("Accessory")
+        local r8_166 = math.random(1, 100000)
+        r6_166.Name = "#EmoteHolder_" .. r8_166
+        r6_166.Parent = r3_166
+        r6_166:SetAttribute("EmoteProperty", true)
+        local r7_166 = require(r1_166.Emotes.VFX)
+        r7_166:MainFunction({
+          Character = r3_166,
+          vfxName = "Embers",
+          SpecificModule = r1_166.Emotes.VFX,
+          AnimSent = 83905432418191,
+          RealBind = r6_166,
+        })
+        r8_166 = Instance.new("Sound")
+        r8_166.SoundId = "rbxassetid://94529938730886"
+        r8_166.Volume = 3.45
+        local r9_166 = game.Players.LocalPlayer.Character:FindFirstChild("Torso")
+        if r9_166 then
+          r9_166 = game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")
+          if r9_166 then
+          end
+        end
+        r8_166.Parent = workspace
+        r8_166:Play()
+        return
+      end
+      r12_4:NewButton("Embers", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 108
+        local r0_108 = game:GetService("Players")
+        local r1_108 = game:GetService("ReplicatedStorage")
+        if r0_108.LocalPlayer.Character then
+          local r3_108 = r0_108.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_108 = r3_108:WaitForChild("Humanoid")
+        local r5_108 = Instance.new("Animation")
+        r5_108.AnimationId = "rbxassetid://114451374603244"
+        local r6_108 = r4_108:LoadAnimation(r5_108)
+        r6_108:Play()
+        local r7_108 = Instance.new("Accessory")
+        local r9_108 = math.random(1, 100000)
+        r7_108.Name = "#EmoteHolder_" .. r9_108
+        r7_108.Parent = r3_108
+        r7_108:SetAttribute("EmoteProperty", true)
+        local r8_108 = require(r1_108.Emotes.VFX)
+        r8_108:MainFunction({
+          Character = r3_108,
+          vfxName = "Time Shift",
+          SpecificModule = r1_108.Emotes.VFX,
+          AnimSent = 1.1445137460324e+014,
+          RealBind = r7_108,
+        })
+        r9_108 = Instance.new("Sound")
+        r9_108.SoundId = "rbxassetid://78909185953598"
+        r9_108.Volume = 3
+        r9_108.Parent = workspace
+        r9_108:Play()
+        task.wait(7.9)
+        r6_108:Stop()
+        r9_108:Stop()
+        return
+      end
+      r12_4:NewButton("Time Shift", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 115
+        local r0_115 = game:GetService("Players")
+        local r1_115 = game:GetService("ReplicatedStorage")
+        if r0_115.LocalPlayer.Character then
+          local r3_115 = r0_115.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_115 = r3_115:WaitForChild("Humanoid")
+        local r5_115 = Instance.new("Animation")
+        r5_115.AnimationId = "rbxassetid://111810635064735"
+        local r6_115 = r4_115:LoadAnimation(r5_115)
+        r6_115:Play()
+        local r7_115 = Instance.new("Accessory")
+        local r9_115 = math.random(1, 100000)
+        r7_115.Name = "#EmoteHolder_" .. r9_115
+        r7_115.Parent = r3_115
+        r7_115:SetAttribute("EmoteProperty", true)
+        local r8_115 = require(r1_115.Emotes.VFX)
+        r8_115:MainFunction({
+          Character = r3_115,
+          vfxName = "Boxed Up",
+          SpecificModule = r1_115.Emotes.VFX,
+          AnimSent = 1.1181063506474e+014,
+          RealBind = r7_115,
+        })
+        r9_115 = Instance.new("Sound")
+        r9_115.SoundId = "rbxassetid://90314606305113"
+        r9_115.Volume = 3
+        r9_115.Parent = workspace
+        r9_115:Play()
+        return
+      end
+      r12_4:NewButton("Boxed Up", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 17
+        local r0_17 = game:GetService("ReplicatedStorage")
+        r0_17 = r0_17:WaitForChild("Emotes")
+        script = r0_17
+        r0_17 = game:GetService("Players")
+        if r0_17.LocalPlayer.Character then
+          local r2_17 = r0_17.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r3_17 = r2_17:WaitForChild("Humanoid")
+        local r4_17 = r2_17:WaitForChild("HumanoidRootPart")
+        local r6_17 = function(r0_19, r1_19)
+          -- line: [0, 0] id: 19
+          local r2_19 = string.lower(r1_19)
+          local r2_19, r3_19, r4_19 = ipairs(r0_19:GetDescendants())
+          local r7_19 = string.lower(r6_19.Name)
+          if r7_19 == r2_19 then
+            return r6_19
+          end
+          for r5_19, r6_19 in r2_19 do
+            return
+        end
+        local r7_17 = function(r0_18)
+          -- line: [0, 0] id: 18
+          local r1_18, r2_18, r3_18 = ipairs(r0_18:GetDescendants())
+          local r6_18 = r5_18:IsA("BasePart")
+          if not r6_18 then
+            return r5_18
+          end
+          for r4_18, r5_18 in r1_18 do
+            return
+        end
+        local r8_17 = function(r0_22, r1_22, r2_22)
+          -- line: [0, 0] id: 22
+          local r3_22 = upval_0(script, "dialogue")
+          if r3_22 then
+            r3_22 = script:FindFirstChild("dialogue", true)
+          end
+          if r3_22 then
+            warn("Dialogue not found inside Emotes")
+            return
+          end
+          local r6_22 = function()
+            -- line: [0, 0] id: 23
+            local r0_23 = upval_1:Clone()
+            upval_0 = r0_23
+            return
+          end
+          pcall(r6_22)
+          if nil then
+            warn("Failed to clone dialogue")
+            return
+          end
+          local r6_22 = function()
+            -- line: [0, 0] id: 24
+            wait(8)
+            upval_0:Destroy()
+            return
+          end
+          task.spawn(r6_22)
+          table.insert(r0_22, nil)
+          nil:SetAttribute("EmoteProperty", true)
+          r2_22.rock = nil
+          nil.Name = "Handle"
+          local r5_22 = nil:FindFirstChild("Handle")
+          if r5_22 then
+            r5_22 = upval_1(nil)
+          end
+          if not r5_22 then
+            r5_22.Anchored = false
+            r5_22.CanCollide = false
+            r5_22.Transparency = 0
+            local r7_22 = Vector3.new(0, 2, 0)
+            r5_22.Position = upval_2.Position + upval_2.CFrame.LookVector * 3 + r7_22
+          end
+          r6_22 = upval_0(nil, "m6d")
+          if r6_22 then
+            r7_22 = Instance.new("Motor6D")
+            r7_22.Name = "m6d"
+          end
+          r7_22.Part0 = upval_2
+          if r5_22 then
+          end
+          r7_22.Part1 = upval_2
+          r7_22.Parent = upval_2
+          local r7_22, r8_22, r9_22 = ipairs(nil:GetDescendants())
+          local r12_22 = r11_22:IsA("BasePart")
+          if not r12_22 then
+            r11_22.Transparency = 0
+            r11_22.CanCollide = false
+          end
+          r12_22 = r11_22:IsA("BillboardGui")
+          if not r12_22 then
+            r11_22.Enabled = true
+            r12_22 = r11_22:FindFirstChild("CanvasGroup")
+            if not r12_22 then
+              r12_22.Enabled = true
+            end
+            r12_22 = r11_22:IsA("SurfaceGui")
+            if not r12_22 then
+              r11_22.Enabled = true
+            end
+          end
+          for r10_22, r11_22 in r7_22 do
+            nil.Parent = upval_3
+            return
+        end
+        local r10_17 = function(r0_20)
+          -- line: [0, 0] id: 20
+          if not r0_20.rock then
+            local r1_20, r2_20, r3_20 = ipairs(r0_20.rock:GetDescendants())
+            local r6_20 = r5_20:IsA("BasePart")
+            if not r6_20 then
+              r5_20.Transparency = 0
+            end
+            r6_20 = r5_20:IsA("BillboardGui")
+            if r6_20 then
+              r6_20 = r5_20:IsA("SurfaceGui")
+              if not r6_20 then
+              end
+              r5_20.Enabled = true
+            end
+            for r4_20, r5_20 in r1_20 do
+            end
+            return
+        end
+        r10_17 = Instance.new("Animation")
+        r10_17.AnimationId = "rbxassetid://16746843881"
+        local r11_17 = r3_17:LoadAnimation(r10_17)
+        r11_17:Play()
+        r8_17(r12_17, nil, {})
+        r9_17.visible(r12_17)
+        local r15_17 = function()
+          -- line: [0, 0] id: 21
+          if not upval_0.rock then
+            if not upval_0.rock.Parent then
+              upval_0.rock:Destroy()
+            end
+          end
+          return
+        end
+        r11_17.Stopped:Connect(r15_17)
+        local r13_17, r14_17, r15_17 = pairs(r5_17)
+        local r18_17 = Instance.new("Sound")
+        r18_17.SoundId = r17_17.SoundId
+        r18_17.Volume = r17_17.Volume
+        r18_17.Looped = r17_17.Looped
+        if not r17_17.ParentTorso then
+          local r19_17 = r2_17:FindFirstChild("Torso")
+          if r19_17 then
+            r19_17 = r2_17:FindFirstChild("UpperTorso")
+            if r19_17 then
+            end
+          end
+          r18_17.Parent = r4_17
+        end
+        r18_17.Parent = r2_17
+        r18_17:Play()
+        for r16_17, r17_17 in r13_17 do
+          return
+      end
+      r12_4:NewButton("Nah, I'd win.", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 119
+        local r0_119 = game:GetService("Players")
+        if r0_119.LocalPlayer.Character then
+          local r1_119 = r0_119.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_119 = r1_119:WaitForChild("Humanoid")
+        local r3_119 = game:GetService("CollectionService")
+        local r4_119 = Instance.new("Sound")
+        r4_119.SoundId = "rbxassetid://82078299414169"
+        r4_119.Volume = 1
+        r4_119.Looped = true
+        local r5_119 = r1_119:FindFirstChild("HumanoidRootPart")
+        if r5_119 then
+        end
+        r4_119.Parent = r1_119.PrimaryPart
+        r4_119:Play()
+        r5_119 = Instance.new("Animation")
+        r5_119.AnimationId = "rbxassetid://121440687354239"
+        local r6_119 = r2_119:LoadAnimation(r5_119)
+        r6_119.Looped = true
+        r6_119:Play()
+        if script.BladesOfJade then
+          return
+        end
+        local r9_119 = function(r0_123)
+          -- line: [0, 0] id: 123
+          r0_123:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_123)
+          upval_1:AddTag(r0_123, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r10_119, r11_119, r12_119 = pairs(script.BladesOfJade.Attach:GetChildren())
+        local r15_119 = r14_119:Clone()
+        local r16_119 = r1_119:WaitForChild("Head")
+        r15_119.Parent = r16_119
+        r9_119(r15_119)
+        for r13_119, r14_119 in r10_119 do
+          local r10_119, r11_119, r12_119 = pairs({script.BladesOfJade.JadeL, script.BladesOfJade.JadeR})
+          r15_119 = r14_119:Clone()
+          r9_119(r15_119)
+          r16_119 = r15_119:FindFirstChildOfClass("Motor6D")
+          r9_119(r16_119)
+          if r14_119.Name == "JadeL" then
+          end
+          r16_119.Part0 = r1_119["Left Arm"]
+          r16_119.Part1 = r15_119.ChainPart1
+          r16_119.Parent = r1_119["Left Arm"]
+          r15_119.Parent = r1_119
+          r16_119.Name = "ChainPart1"
+          for r13_119, r14_119 in r10_119 do
+            r10_119 = script.BladesOfJade.Part:FindFirstChild("ClashVFX")
+            if not r10_119 then
+              r11_119 = r10_119:Clone()
+              r11_119.Parent = r1_119.PrimaryPart
+              r9_119(r11_119)
+            end
+            r11_119 = RaycastParams.new()
+            r11_119.FilterType = Enum.RaycastFilterType.Exclude
+            r13_119 = workspace:FindFirstChild("Thrown")
+            r11_119.FilterDescendantsInstances = r12_119
+            local r12_119 = function()
+              -- line: [0, 0] id: 120
+              local r0_120, r1_120, r2_120 = pairs(upval_0:GetDescendants())
+              local r5_120 = tostring(r4_120)
+              if r5_120 ~= "JadeL" then
+                r5_120 = tostring(r4_120)
+                if r5_120 == "JadeR" then
+                end
+                r5_120 = r4_120:IsA("Model")
+                if not r5_120 then
+                  local r5_120, r6_120, r7_120 = pairs(r4_120:GetDescendants())
+                  local r10_120 = r9_120:IsA("ParticleEmitter")
+                  if not r10_120 then
+                    r10_120 = tostring(r9_120)
+                    if r10_120 == "smoke" then
+                      local r13_120 = workspace:Raycast(-10, 0)
+                      r10_120 = workspace:Raycast(workspace, upval_0.PrimaryPart.Position, r13_120, upval_1)
+                      if not r10_120 then
+                        local r11_120 = ColorSequence.new(r10_120.Instance.Color)
+                        r9_120.Color = r11_120
+                      end
+                    end
+                    local r12_120 = r9_120:GetAttribute("EmitCount")
+                    if r12_120 then
+                    end
+                    r9_120:Emit(r9_120, 10)
+                  end
+                  for r8_120, r9_120 in r5_120 do
+                  end
+                end
+                for r3_120, r4_120 in r0_120 do
+                  return
+            end
+            local r13_119 = function()
+              -- line: [0, 0] id: 122
+              local r0_122 = upval_0.PrimaryPart:FindFirstChild("ClashVFX")
+              if not r0_122 then
+                local r1_122, r2_122, r3_122 = pairs(r0_122:GetDescendants())
+                local r6_122 = r5_122:IsA("ParticleEmitter")
+                if not r6_122 then
+                  local r8_122 = r5_122:GetAttribute("EmitCount")
+                  if r8_122 then
+                  end
+                  r5_122:Emit(r5_122, 10)
+                end
+                for r4_122, r5_122 in r1_122 do
+                end
+                return
+            end
+            r14_119 = r6_119:GetMarkerReachedSignal("floorhit")
+            r14_119:Connect(r12_119)
+            r14_119 = r6_119:GetMarkerReachedSignal("touchfloor")
+            r14_119:Connect(r13_119)
+            local r16_119 = function()
+              -- line: [0, 0] id: 121
+              upval_0:Stop()
+              upval_1:Stop()
+              local r0_121, r1_121, r2_121 = pairs(upval_2)
+              if not r4_121 then
+                if not r4_121.Parent then
+                  r4_121:Destroy()
+                end
+              end
+              for r3_121, r4_121 in r0_121 do
+                return
+            end
+            task.delay(10, r16_119)
+            return
+      end
+      r12_4:NewButton("Blades Of Jade", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 98
+        local r0_98 = game:GetService("Players")
+        if r0_98.LocalPlayer.Character then
+          local r1_98 = r0_98.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_98 = r1_98:WaitForChild("Humanoid")
+        local r3_98 = game:GetService("CollectionService")
+        local r4_98 = Instance.new("Sound")
+        r4_98.SoundId = "rbxassetid://125713401851477"
+        r4_98.Volume = 2
+        r4_98.Looped = true
+        local r5_98 = r1_98:FindFirstChild("HumanoidRootPart")
+        if r5_98 then
+        end
+        r4_98.Parent = r1_98.PrimaryPart
+        r4_98:Play()
+        r5_98 = Instance.new("Animation")
+        r5_98.AnimationId = "rbxassetid://74441004296237"
+        local r6_98 = r2_98:LoadAnimation(r5_98)
+        r6_98.Looped = true
+        r6_98:Play()
+        local r8_98 = function(r0_107)
+          -- line: [0, 0] id: 107
+          r0_107:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_107)
+          upval_1:AddTag(r0_107, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r9_98 = function()
+          -- line: [0, 0] id: 105
+          local r0_105, r1_105, r2_105 = pairs(upval_0.PrimaryPart:GetChildren())
+          local r5_105 = r4_105:GetAttribute("Wolf")
+          if not r5_105 then
+            r4_105:Destroy()
+          end
+          for r3_105, r4_105 in r0_105 do
+            return
+        end
+        local r10_98 = function(r0_99)
+          -- line: [0, 0] id: 99
+          local r1_99, r2_99, r3_99 = pairs(r0_99.things)
+          local r6_99 = r5_99:Clone()
+          upval_0(r6_99)
+          if r0_99.Parent then
+          end
+          r6_99.Parent = upval_1
+          local r7_99 = r6_99:FindFirstChildOfClass("Motor6D")
+          if not r7_99 then
+            upval_0(r7_99)
+            if r5_99.Name == r0_99.Left then
+            end
+            if not r0_99.Parent then
+            end
+            r7_99.Part0 = r0_99.Parent
+            r7_99.Part1 = r6_99
+            r7_99.Parent = r0_99.Parent
+          end
+          if not r0_99.set then
+            r6_99:SetAttribute("Wolf", true)
+          end
+          for r4_99, r5_99 in r1_99 do
+            return
+        end
+        r10_98({things = r14_98, Left = "HandleL"})
+        r10_98({
+          things = r14_98,
+          Left = "Left",
+          Parent = r1_98.PrimaryPart,
+          set = true,
+        })
+        local r12_98 = function()
+          -- line: [0, 0] id: 103
+          local r0_103 = upval_0:FindFirstChild("Sparks2")
+          if r0_103 then
+            local r1_103 = upval_1.Sparks2:Clone()
+            r1_103.Parent = upval_0
+            r1_103 = r1_103:FindFirstChildOfClass("Motor6D")
+            if not r1_103 then
+              r1_103.Part0 = upval_0.PrimaryPart
+              r1_103.Part1 = r1_103
+              r1_103.Parent = upval_0.PrimaryPart
+            end
+          end
+          local r1_103, r2_103, r3_103 = pairs(r1_103:GetDescendants())
+          local r6_103 = r5_103:IsA("ParticleEmitter")
+          if not r6_103 then
+            local r8_103 = r5_103:GetAttribute("EmitCount")
+            if r8_103 then
+            end
+            r5_103:Emit(r5_103, 10)
+          end
+          for r4_103, r5_103 in r1_103 do
+            return
+        end
+        local r13_98 = function()
+          -- line: [0, 0] id: 100
+          upval_0()
+          local r0_100 = upval_1:FindFirstChild("SpinL")
+          local r1_100 = upval_1:FindFirstChild("SpinR")
+          if r0_100 then
+            if r1_100 then
+              local r2_100, r3_100, r4_100 = pairs({upval_2.SpinL, upval_2.SpinR})
+              local r7_100 = r6_100:Clone()
+              upval_3(r7_100)
+              r7_100.Parent = upval_1
+              local r8_100 = r7_100:FindFirstChildOfClass("Motor6D")
+              if r6_100.Name == "SpinL" then
+                if upval_1["Left Arm"] then
+                end
+              end
+              r8_100.Part0 = upval_1["Right Arm"]
+              r8_100.Part1 = r7_100
+              r8_100.Parent = upval_1["Right Arm"]
+              for r5_100, r6_100 in r2_100 do
+              end
+            end
+            r2_100 = upval_1:FindFirstChild("SpinL")
+            r2_100 = upval_1:FindFirstChild("SpinR")
+            local r2_100 = function(r0_101)
+              -- line: [0, 0] id: 101
+              local r1_101, r2_101, r3_101 = pairs(r0_101:GetDescendants())
+              local r6_101 = r5_101:IsA("ParticleEmitter")
+              if not r6_101 then
+                local r7_101 = function()
+                  -- line: [0, 0] id: 102
+                  upval_0.Enabled = true
+                  local r1_102 = upval_0:GetAttribute("EmitDuration")
+                  if r1_102 then
+                  end
+                  task.wait(1)
+                  if not upval_0 then
+                    if not upval_0.Parent then
+                      upval_0.Enabled = false
+                    end
+                  end
+                  return
+                end
+                task.spawn(r7_101)
+              end
+              for r4_101, r5_101 in r1_101 do
+                return
+            end
+            local r3_100, r4_100, r5_100 = pairs({r2_100, r2_100})
+            if not r7_100 then
+              r2_100(r7_100)
+            end
+            for r6_100, r7_100 in r3_100 do
+              return
+        end
+        local r14_98 = r6_98:GetMarkerReachedSignal("stop")
+        r14_98:Connect(r9_98)
+        r14_98 = r6_98:GetMarkerReachedSignal("clang")
+        r14_98:Connect(r12_98)
+        r14_98 = r6_98:GetMarkerReachedSignal("restart")
+        local r16_98 = function()
+          -- line: [0, 0] id: 104
+          local r0_104, r1_104, r2_104 = pairs(upval_0.PrimaryPart:GetChildren())
+          local r5_104 = r4_104:GetAttribute("Wolf")
+          if not r5_104 then
+            local r5_104, r6_104, r7_104 = pairs(r4_104:GetDescendants())
+            local r10_104 = r9_104:IsA("ParticleEmitter")
+            if not r10_104 then
+              local r12_104 = r9_104:GetAttribute("EmitCount")
+              if r12_104 then
+              end
+              r9_104:Emit(r9_104, 10)
+            end
+            for r8_104, r9_104 in r5_104 do
+            end
+            for r3_104, r4_104 in r0_104 do
+              return
+        end
+        r14_98:Connect(r16_98)
+        r14_98 = r6_98:GetMarkerReachedSignal("spin")
+        r14_98:Connect(r13_98)
+        local r16_98 = function()
+          -- line: [0, 0] id: 106
+          upval_0:Stop()
+          upval_1:Stop()
+          local r0_106, r1_106, r2_106 = pairs(upval_2)
+          if not r4_106 then
+            if not r4_106.Parent then
+              r4_106:Destroy()
+            end
+          end
+          for r3_106, r4_106 in r0_106 do
+            upval_3()
+            return
+        end
+        task.delay(6, r16_98)
+        return
+      end
+      r12_4:NewButton("Death", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 60
+        local r0_60 = game:GetService("Players")
+        if r0_60.LocalPlayer.Character then
+          local r1_60 = r0_60.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_60 = r1_60:WaitForChild("Humanoid")
+        local r3_60 = game:GetService("CollectionService")
+        local r4_60 = game:GetService("Debris")
+        local r5_60 = Instance.new("Sound")
+        r5_60.SoundId = "rbxassetid://112089323132965"
+        r5_60.Volume = 2
+        local r6_60 = r1_60:FindFirstChild("HumanoidRootPart")
+        if r6_60 then
+        end
+        r5_60.Parent = r1_60.PrimaryPart
+        r5_60:Play()
+        r6_60 = Instance.new("Animation")
+        r6_60.AnimationId = "rbxassetid://106778226674700"
+        local r7_60 = r2_60:LoadAnimation(r6_60)
+        r7_60.Looped = false
+        r7_60:Play()
+        local r9_60 = function(r0_65)
+          -- line: [0, 0] id: 65
+          r0_65:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_65)
+          upval_1:AddTag(r0_65, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r11_60 = function(r0_63, r1_63, r2_63)
+          -- line: [0, 0] id: 63
+          local r3_63 = upval_0[r0_63]:Clone()
+          r3_63.Parent = r1_63
+          upval_1:AddItem(r3_63, 5)
+          upval_2(r3_63)
+          local r4_63 = r3_63:FindFirstChildOfClass("Motor6D")
+          if not r4_63 then
+            r3_63.CanCollide = false
+            r3_63.Massless = true
+            r3_63.Anchored = false
+            r4_63.Part0 = r1_63
+            r4_63.Part1 = r3_63
+          end
+          local r6_63 = CFrame.new(0, 0, -2)
+          r3_63.CFrame = upval_3.PrimaryPart.CFrame * r6_63
+          local r5_63, r6_63, r7_63 = pairs(r3_63:GetDescendants())
+          local r10_63 = -2:IsA("ParticleEmitter")
+          if not r10_63 then
+            local r12_63 = -2:GetAttribute("EmitCount")
+            if r12_63 then
+            end
+            -2:Emit(-2, 10)
+            if not r4_63 then
+              -2.Enabled = true
+            end
+            if r0_63 == "head" then
+              if not r2_63 then
+                if not r2_63.head then
+                  table.insert(r2_63.head, -2)
+                end
+              end
+            end
+            if not r2_63 then
+              if not r2_63.all then
+                table.insert(r2_63.all, -2)
+              end
+            end
+          end
+          for r8_63, r9_63 in r5_63 do
+            return
+        end
+        local r12_60 = function()
+          -- line: [0, 0] id: 64
+          upval_0("arm", upval_1["Right Arm"], {all = r1_64})
+          upval_0("head", upval_1.Head, {head = r0_64, all = r1_64})
+          task.wait(1.1)
+          local r2_64, r3_64, r4_64 = pairs(r0_64)
+          r6_64.Enabled = false
+          for r5_64, r6_64 in r2_64 do
+            local r2_64, r3_64, r4_64 = pairs(r1_64)
+            r6_64.Enabled = false
+            upval_2:AddItem(r6_64, 1)
+            for r5_64, r6_64 in r2_64 do
+              return
+        end
+        local r13_60 = function()
+          -- line: [0, 0] id: 61
+          upval_0("arm2", upval_1["Left Arm"])
+          upval_0("auraoff", upval_1["Left Arm"])
+          local r0_61 = Instance.new("Part")
+          local r1_61 = Vector3.new(1, 1, 1)
+          r0_61.Size = r1_61
+          r0_61.Transparency = 1
+          r0_61.Anchored = false
+          r0_61.CanCollide = false
+          r0_61.Parent = upval_1.PrimaryPart
+          r1_61 = Instance.new("ParticleEmitter")
+          r1_61.Texture = "rbxassetid://10826594435"
+          r1_61.Rate = 50
+          local r2_61 = NumberRange.new(1)
+          r1_61.Lifetime = r2_61
+          r2_61 = NumberRange.new(2)
+          r1_61.Speed = r2_61
+          r2_61 = Vector2.new(180, 180)
+          r1_61.SpreadAngle = r2_61
+          r1_61.Parent = r0_61
+          local r3_61 = function()
+            -- line: [0, 0] id: 62
+            upval_0.Enabled = true
+            task.wait(1)
+            upval_0.Enabled = false
+            upval_1:AddItem(upval_2, 2)
+            return
+          end
+          task.spawn(r3_61)
+          return
+        end
+        local r14_60 = r7_60:GetMarkerReachedSignal("first")
+        r14_60:Connect(r12_60)
+        r14_60 = r7_60:GetMarkerReachedSignal("sec")
+        r14_60:Connect(r13_60)
+        local r16_60 = function()
+          -- line: [0, 0] id: 66
+          upval_0:Stop()
+          upval_1:Stop()
+          local r0_66, r1_66, r2_66 = pairs(upval_2)
+          if not r4_66 then
+            if not r4_66.Parent then
+              r4_66:Destroy()
+            end
+          end
+          for r3_66, r4_66 in r0_66 do
+            return
+        end
+        task.delay(5, r16_60)
+        return
+      end
+      r12_4:NewButton("Amplify", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 29
+        local r0_29 = game:GetService("Players")
+        if r0_29.LocalPlayer.Character then
+          local r1_29 = r0_29.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_29 = r1_29:WaitForChild("Humanoid")
+        local r3_29 = game:GetService("CollectionService")
+        local r4_29 = Instance.new("Sound")
+        r4_29.SoundId = "rbxassetid://131221493098961"
+        r4_29.Volume = 2
+        r4_29.Looped = true
+        local r5_29 = r1_29:FindFirstChild("HumanoidRootPart")
+        if r5_29 then
+        end
+        r4_29.Parent = r1_29.PrimaryPart
+        r4_29:Play()
+        r5_29 = Instance.new("Animation")
+        r5_29.AnimationId = "rbxassetid://132769857103497"
+        local r6_29 = r2_29:LoadAnimation(r5_29)
+        r6_29.Looped = true
+        r6_29:Play()
+        local r8_29 = function(r0_30)
+          -- line: [0, 0] id: 30
+          r0_30:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_30)
+          upval_1:AddTag(r0_30, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r9_29 = function(r0_31, r1_31, r2_31)
+          -- line: [0, 0] id: 31
+          local r3_31 = r0_31:FindFirstChildOfClass("Motor6D")
+          if r3_31 then
+            return
+          end
+          upval_0(r3_31)
+          r3_31.Part0 = r1_31
+          if r2_31 then
+          end
+          r3_31.Part1 = r0_31
+          r3_31.Parent = r1_31
+          return
+        end
+        local r10_29 = function()
+          -- line: [0, 0] id: 33
+          local r0_33 = script.SumWater:Clone()
+          upval_0(r0_33)
+          r0_33.Parent = upval_1
+          local r1_33 = r0_33:FindFirstChild("SumWater")
+          if not r1_33 then
+            upval_2(r1_33, upval_1.Head, r0_33)
+          end
+          local r2_33 = script.AuraRen:Clone()
+          upval_0(r2_33)
+          r2_33.Parent = upval_1
+          local r3_33 = r2_33:FindFirstChildOfClass("Motor6D")
+          if not r3_33 then
+            upval_2(r2_33, upval_1.PrimaryPart, r2_33)
+          end
+          local r4_33 = script.tounge:Clone()
+          upval_0(r4_33)
+          r4_33.Parent = upval_1
+          local r5_33 = r4_33:FindFirstChild("tounge")
+          if not r5_33 then
+            upval_2(r5_33, upval_1.Head, r4_33)
+          end
+          return
+        end
+        r10_29()
+        local r13_29 = function()
+          -- line: [0, 0] id: 32
+          upval_0:Stop()
+          upval_1:Stop()
+          local r0_32, r1_32, r2_32 = pairs(upval_2)
+          if not r4_32 then
+            if not r4_32.Parent then
+              r4_32:Destroy()
+            end
+          end
+          for r3_32, r4_32 in r0_32 do
+            return
+        end
+        task.delay(10, r13_29)
+        return
+      end
+      r12_4:NewButton("Locked In", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 34
+        local r0_34 = game:GetService("Players")
+        if r0_34.LocalPlayer.Character then
+          local r1_34 = r0_34.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_34 = r1_34:WaitForChild("Humanoid")
+        local r3_34 = game:GetService("CollectionService")
+        local r4_34 = game:GetService("Debris")
+        local r5_34 = game:GetService("TweenService")
+        local r6_34 = Instance.new("Sound")
+        r6_34.SoundId = "rbxassetid://124276204137474"
+        r6_34.Volume = 2
+        r6_34.Looped = true
+        local r7_34 = r1_34:FindFirstChild("HumanoidRootPart")
+        if r7_34 then
+        end
+        r6_34.Parent = r1_34.PrimaryPart
+        r6_34:Play()
+        r7_34 = Instance.new("Animation")
+        r7_34.AnimationId = "rbxassetid://120577018823573"
+        local r8_34 = r2_34:LoadAnimation(r7_34)
+        r8_34.Looped = false
+        r8_34:Play()
+        local r9_34 = Instance.new("Animation")
+        r9_34.AnimationId = "rbxassetid://102959457211902"
+        local r10_34 = r2_34:LoadAnimation(r9_34)
+        r10_34.Looped = true
+        local r12_34 = function(r0_37)
+          -- line: [0, 0] id: 37
+          r0_37:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_37)
+          upval_1:AddTag(r0_37, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r13_34 = function(r0_39, r1_39)
+          -- line: [0, 0] id: 39
+          local r2_39 = Instance.new("WeldConstraint")
+          r2_39.Part0 = r0_39
+          r2_39.Part1 = r1_39
+          r2_39.Parent = r1_39
+          return
+        end
+        local r17_34 = function()
+          -- line: [0, 0] id: 35
+          if not upval_0 then
+            if upval_1.PrimaryPart then
+            end
+            return
+          end
+          local r0_35 = upval_0.Impact:Clone()
+          r0_35.Parent = workspace.Thrown
+          upval_2(r0_35)
+          local r2_35 = r0_35:GetAttribute("Offset")
+          r0_35.CFrame = upval_1.PrimaryPart.CFrame * r2_35
+          upval_3(upval_1.PrimaryPart, r0_35)
+          local r1_35 = Instance.new("Highlight")
+          r1_35.Parent = upval_1
+          upval_2(r1_35)
+          r2_35 = Color3.fromRGB(84, 255, 113)
+          r1_35.OutlineColor = r2_35
+          r2_35 = Color3.fromRGB(255, 255, 255)
+          r1_35.FillColor = r2_35
+          r1_35.FillTransparency = 1
+          r1_35.OutlineTransparency = 1
+          r1_35.DepthMode = Enum.HighlightDepthMode.Occluded
+          local r5_35 = upval_4:Create(Enum.EasingStyle.Quint)
+          r2_35 = upval_4:Create(upval_4, r1_35, r5_35, {FillTransparency = 0.55, OutlineTransparency = 0})
+          r2_35:Play()
+          local r5_35 = function()
+            -- line: [0, 0] id: 36
+            if not upval_0 then
+              if not upval_0.Parent then
+                local r3_36 = upval_1:Create(Enum.EasingStyle.Quart)
+                local r0_36 = upval_1:Create(upval_1, upval_0, r3_36, {FillTransparency = 1, OutlineTransparency = 1})
+                r0_36:Play()
+              end
+            end
+            return
+          end
+          task.delay(0.2, r5_35)
+          return
+        end
+        task.delay(0.35, r17_34)
+        local r17_34 = function()
+          -- line: [0, 0] id: 38
+          if not upval_0 then
+            if upval_1.PrimaryPart then
+            end
+            return
+          end
+          local r0_38, r1_38, r2_38 = pairs(upval_0.Puzzle:GetDescendants())
+          local r5_38 = r4_38:IsA("Part")
+          if not r5_38 then
+            r5_38 = r4_38:Clone()
+            r5_38.Parent = workspace.Thrown
+            upval_2(r5_38)
+            local r7_38 = r5_38:GetAttribute("Offset")
+            r5_38.CFrame = upval_1.PrimaryPart.CFrame * r7_38
+            upval_3(upval_1.PrimaryPart, r5_38)
+          end
+          for r3_38, r4_38 in r0_38 do
+            return
+        end
+        task.delay(0.43, r17_34)
+        local r17_34 = function()
+          -- line: [0, 0] id: 41
+          upval_0:Play()
+          return
+        end
+        r8_34.Stopped:Connect(r17_34)
+        local r17_34 = function()
+          -- line: [0, 0] id: 40
+          upval_0:Stop()
+          upval_1:Stop()
+          upval_2:Stop()
+          local r0_40, r1_40, r2_40 = pairs(upval_3)
+          if not r4_40 then
+            if not r4_40.Parent then
+              r4_40:Destroy()
+            end
+          end
+          for r3_40, r4_40 in r0_40 do
+            return
+        end
+        task.delay(10, r17_34)
+        return
+      end
+      r12_4:NewButton("Perfect Concentration", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 54
+        local r0_54 = game:GetService("Players")
+        if r0_54.LocalPlayer.Character then
+          local r1_54 = r0_54.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_54 = r1_54:WaitForChild("Humanoid")
+        local r3_54 = game:GetService("CollectionService")
+        local r4_54 = Instance.new("Sound")
+        r4_54.SoundId = "rbxassetid://140523806098392"
+        r4_54.Volume = 2
+        r4_54.Parent = r1_54.PrimaryPart
+        r4_54:Play()
+        local r5_54 = Instance.new("Sound")
+        r5_54.SoundId = "rbxassetid://72724090837907"
+        r5_54.Volume = 2
+        r5_54.Looped = true
+        r5_54.Parent = r1_54.PrimaryPart
+        local r8_54 = function()
+          -- line: [0, 0] id: 57
+          upval_0:Play()
+          return
+        end
+        task.delay(1.25, r8_54)
+        local r6_54 = Instance.new("Animation")
+        r6_54.AnimationId = "rbxassetid://100667788888119"
+        local r7_54 = r2_54:LoadAnimation(r6_54)
+        r7_54.Looped = false
+        r7_54:Play()
+        r8_54 = Instance.new("Animation")
+        r8_54.AnimationId = "rbxassetid://84711944358577"
+        local r9_54 = r2_54:LoadAnimation(r8_54)
+        r9_54.Looped = true
+        local r11_54 = function(r0_55)
+          -- line: [0, 0] id: 55
+          r0_55:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_55)
+          upval_1:AddTag(r0_55, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r14_54 = function()
+          -- line: [0, 0] id: 56
+          if r0_56.interrupted then
+            local r1_56 = script.AllParticles.FaceShade:Clone()
+            r1_56.Parent = upval_0.Head
+            upval_1(r1_56)
+            local r2_56 = script.AllParticles.Star:Clone()
+            r2_56.Parent = upval_0.Torso
+            upval_1(r2_56)
+          end
+          return
+        end
+        task.delay(0.65, r14_54)
+        local r14_54 = function()
+          -- line: [0, 0] id: 59
+          upval_0:Play()
+          return
+        end
+        r7_54.Stopped:Connect(r14_54)
+        local r14_54 = function()
+          -- line: [0, 0] id: 58
+          upval_0:Stop()
+          upval_1:Stop()
+          upval_2:Destroy()
+          local r0_58, r1_58, r2_58 = pairs(upval_3)
+          if not r4_58 then
+            if not r4_58.Parent then
+              r4_58:Destroy()
+            end
+          end
+          for r3_58, r4_58 in r0_58 do
+            return
+        end
+        task.delay(10, r14_54)
+        return
+      end
+      r12_4:NewButton("The Shadow", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 112
+        local r0_112 = game:GetService("Players")
+        if r0_112.LocalPlayer.Character then
+          local r1_112 = r0_112.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_112 = r1_112:WaitForChild("Humanoid")
+        local r3_112 = game:GetService("CollectionService")
+        local r5_112 = Instance.new("Sound")
+        r5_112.SoundId = "rbxassetid://17097414525"
+        r5_112.Volume = 1
+        r5_112.Looped = true
+        local r6_112 = r1_112:FindFirstChild("Torso")
+        if r6_112 then
+        end
+        r5_112.Parent = r1_112.PrimaryPart
+        r5_112:Play()
+        r6_112 = Instance.new("Animation")
+        r6_112.AnimationId = "rbxassetid://17097409396"
+        local r7_112 = r2_112:LoadAnimation(r6_112)
+        r7_112.Looped = false
+        r7_112:Play()
+        local r9_112 = function(r0_113)
+          -- line: [0, 0] id: 113
+          r0_113:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_113)
+          upval_1:AddTag(r0_113, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r11_112 = script.Leye1:Clone()
+        r9_112(r11_112)
+        r9_112(r11_112.m6d)
+        r11_112.m6d.Part0 = r1_112.Head
+        r11_112.m6d.Part1 = r11_112
+        r11_112.m6d.Name = "Leye1"
+        r11_112.m6d.Parent = r1_112.Head
+        r11_112.Parent = r1_112
+        local r13_112 = script.Reye1:Clone()
+        r9_112(r13_112)
+        r9_112(r13_112.m6d)
+        r13_112.m6d.Part0 = r1_112.Head
+        r13_112.m6d.Part1 = r13_112
+        r13_112.m6d.Name = "Reye1"
+        r13_112.m6d.Parent = r1_112.Head
+        r13_112.Parent = r1_112
+        local r15_112 = function()
+          -- line: [0, 0] id: 114
+          upval_0:Stop()
+          upval_1:Stop()
+          local r0_114, r1_114, r2_114 = pairs(upval_2)
+          if not r4_114 then
+            if not r4_114.Parent then
+              r4_114:Destroy()
+            end
+          end
+          for r3_114, r4_114 in r0_114 do
+            return
+        end
+        r7_112.Stopped:Connect(r15_112)
+        return
+      end
+      r12_4:NewButton("Eye Pop", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 124
+        local r0_124 = game:GetService("Players")
+        if r0_124.LocalPlayer.Character then
+          local r1_124 = r0_124.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r2_124 = r1_124:WaitForChild("Humanoid")
+        local r3_124 = game:GetService("CollectionService")
+        local r5_124 = Instance.new("Sound")
+        r5_124.SoundId = "rbxassetid://118729435940431"
+        r5_124.Volume = 2
+        r5_124.Looped = true
+        local r6_124 = r1_124:FindFirstChild("HumanoidRootPart")
+        if r6_124 then
+        end
+        r5_124.Parent = r1_124.PrimaryPart
+        r5_124:Play()
+        r6_124 = Instance.new("Animation")
+        r6_124.AnimationId = "rbxassetid://91110779676867"
+        local r7_124 = r2_124:LoadAnimation(r6_124)
+        r7_124.Looped = false
+        r7_124:Play()
+        local r9_124 = function(r0_125)
+          -- line: [0, 0] id: 125
+          r0_125:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r0_125)
+          upval_1:AddTag(r0_125, "emoteendstuff" .. upval_2.Name)
+          return
+        end
+        local r10_124 = script.objection:Clone()
+        r9_124(r10_124)
+        r9_124(r10_124.objection)
+        r10_124.objection.Part0 = r1_124.PrimaryPart
+        r10_124.objection.Part1 = r10_124
+        r10_124.objection.Parent = r1_124.PrimaryPart
+        r10_124.Parent = r1_124
+        local r12_124 = function()
+          -- line: [0, 0] id: 126
+          upval_0:Stop()
+          upval_1:Stop()
+          local r0_126, r1_126, r2_126 = pairs(upval_2)
+          if not r4_126 then
+            if not r4_126.Parent then
+              r4_126:Destroy()
+            end
+          end
+          for r3_126, r4_126 in r0_126 do
+            if not upval_3 then
+              if not upval_3.Parent then
+                upval_3:Destroy()
+              end
+            end
+            return
+        end
+        r7_124.Stopped:Connect(r12_124)
+        return
+      end
+      r12_4:NewButton("OBJECTION!", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 49
+        local r0_49 = game:GetService("Players")
+        local r1_49 = game:GetService("Debris")
+        local r2_49 = game:GetService("CollectionService")
+        if r0_49.LocalPlayer.Character then
+          local r4_49 = r0_49.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r6_49 = Instance.new("Sound")
+        local r8_49 = math.random(1, 2)
+        r6_49.SoundId = r7_49[r8_49]
+        r6_49.Volume = 2
+        r6_49.Parent = r4_49.PrimaryPart
+        r6_49:Play()
+        table.insert(r5_49, r6_49)
+        local r7_49 = r4_49:WaitForChild("Humanoid")
+        r8_49 = Instance.new("Animation")
+        r8_49.AnimationId = "rbxassetid://120953105100764"
+        local r9_49 = r7_49:LoadAnimation(r8_49)
+        r9_49:Play()
+        local r10_49 = function(r0_50)
+          -- line: [0, 0] id: 50
+          if not r0_50 then
+            return
+          end
+          local r1_50 = script["PowerupT Hing"]:Clone()
+          r1_50:SetAttribute("EmoteProperty", true)
+          table.insert(upval_0, r1_50)
+          r1_50.Parent = upval_1
+          local r2_50 = Instance.new("Weld")
+          r2_50.Part0 = upval_1.PrimaryPart
+          r2_50.Part1 = r1_50
+          r2_50.Parent = r1_50
+          task.wait(0.25)
+          r1_50.BurstAir.Burst:Emit(1)
+          local r3_50, r4_50, r5_50 = pairs(r1_50.Floor:GetChildren())
+          local r8_50 = tostring(r7_50)
+          if r8_50 ~= "Crack" then
+            r7_50.Enabled = true
+          end
+          for r6_50, r7_50 in r3_50 do
+            local r5_50 = function()
+              -- line: [0, 0] id: 51
+              if not upval_0 then
+                return
+              end
+              for r3_51 = 1, 3, 1 do
+                if not upval_0 then
+                  return
+                end
+                local r4_51, r5_51, r6_51 = pairs(upval_1.Lightning:GetChildren())
+                if r7_51 ~= 3 then
+                  r8_51:Emit(r8_51)
+                end
+                r8_51.Enabled = true
+                for r7_51, r8_51 in r4_51 do
+                  if r3_51 == 2 then
+                    if 1.75 then
+                    end
+                  end
+                  wait(1)
+                end
+                return
+            end
+            task.delay(0.85, r5_50)
+            local r5_50 = function()
+              -- line: [0, 0] id: 52
+              if not upval_0 then
+                return
+              end
+              upval_1.Floor.Crack:Emit(1)
+              local r0_52, r1_52, r2_52 = pairs(upval_1.Lightning:GetChildren())
+              r4_52.Enabled = false
+              for r3_52, r4_52 in r0_52 do
+                local r0_52, r1_52, r2_52 = pairs(upval_1.BurstAir:GetChildren())
+                local r5_52 = tostring(r4_52)
+                if r5_52 ~= "Burst" then
+                  local r7_52 = r4_52:GetAttribute("EmitCount")
+                  r4_52:Emit(r4_52, r7_52 * 1.2)
+                end
+                for r3_52, r4_52 in r0_52 do
+                  local r0_52, r1_52, r2_52 = pairs(upval_1.Floor:GetChildren())
+                  r5_52 = tostring(r4_52)
+                  if r5_52 ~= "Crack" then
+                    r4_52.Enabled = false
+                  end
+                  for r3_52, r4_52 in r0_52 do
+                    return
+            end
+            task.delay(4, r5_50)
+            return
+        end
+        r10_49(false)
+        local r13_49 = function()
+          -- line: [0, 0] id: 53
+          local r0_53, r1_53, r2_53 = pairs(upval_0)
+          if not r4_53 then
+            if not r4_53.Parent then
+              r4_53:Destroy()
+            end
+          end
+          for r3_53, r4_53 in r0_53 do
+            return
+        end
+        r9_49.Stopped:Connect(r13_49)
+        return
+      end
+      r12_4:NewButton("Energy Release", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 165
+        local r0_165 = game:GetService("Players")
+        if r0_165.LocalPlayer.Character then
+          local r2_165 = r0_165.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r3_165 = r2_165:WaitForChild("Humanoid")
+        local r4_165 = Instance.new("Animation")
+        r4_165.AnimationId = "rbxassetid://93125757361125"
+        local r5_165 = r3_165:LoadAnimation(r4_165)
+        r5_165:Play()
+        local r6_165 = Instance.new("Sound")
+        r6_165.SoundId = "rbxassetid://128113260968190"
+        r6_165.Volume = 3
+        local r7_165 = r2_165:FindFirstChild("HumanoidRootPart")
+        if r7_165 then
+        end
+        r6_165.Parent = r2_165.PrimaryPart
+        r6_165:Play()
+        r7_165 = Instance.new("Folder")
+        r7_165.Name = "PrideBind"
+        r7_165.Parent = r2_165
+        r7_165:SetAttribute("EmoteProperty", true)
+        local r9_165 = game:GetService("ReplicatedStorage")
+        local r8_165 = require(r9_165.Emotes.VFX)
+        local r12_165 = game:GetService("ReplicatedStorage")
+        r8_165:MainFunction(r8_165, {
+          Character = r2_165,
+          vfxName = "Weak",
+          SpecificModule = r12_165.Emotes.VFX,
+          AnimSent = 93125757361125,
+          RealBind = r7_165,
+        })
+        return
+      end
+      r12_4:NewButton("Weak", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 159
+        local r0_159 = game:GetService("Players")
+        if r0_159.LocalPlayer.Character then
+          local r2_159 = r0_159.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r3_159 = r2_159:WaitForChild("Humanoid")
+        local r4_159 = Instance.new("Animation")
+        r4_159.AnimationId = "rbxassetid://129295156336675"
+        local r5_159 = r3_159:LoadAnimation(r4_159)
+        r5_159:Play()
+        local r6_159 = Instance.new("Sound")
+        r6_159.SoundId = "rbxassetid://108336805340224"
+        r6_159.Volume = 2
+        local r7_159 = r2_159:FindFirstChild("HumanoidRootPart")
+        if r7_159 then
+        end
+        r6_159.Parent = r2_159.PrimaryPart
+        r6_159:Play()
+        r7_159 = Instance.new("Folder")
+        r7_159.Name = "RuthlessBind"
+        r7_159.Parent = r2_159
+        r7_159:SetAttribute("EmoteProperty", true)
+        local r8_159 = require(game.ReplicatedStorage.Emotes.VFX)
+        r8_159:MainFunction({
+          Character = r2_159,
+          vfxName = "Ruthless",
+          SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+          AnimSent = 1.2929515633668e+014,
+          RealBind = r7_159,
+        })
+        return
+      end
+      r12_4:NewButton("Ruthless", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 109
+        local r0_109 = game:GetService("Players")
+        local r1_109 = game:GetService("CollectionService")
+        if r0_109.LocalPlayer.Character then
+          local r3_109 = r0_109.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_109 = r3_109:WaitForChild("Humanoid")
+        local r8_109 = r3_109:FindFirstChild("Torso")
+        if r8_109 then
+          r8_109 = r3_109:FindFirstChild("UpperTorso")
+        end
+        local r9_109 = Instance.new("Sound")
+        r9_109.SoundId = "rbxassetid://91565431637142"
+        r9_109.Volume = 0.5
+        r9_109.Looped = true
+        r9_109.Parent = r8_109
+        r9_109:Play()
+        local r10_109 = Instance.new("Animation")
+        r10_109.AnimationId = "rbxassetid://" .. 1.3117749588283e+014
+        local r11_109 = r4_109:LoadAnimation(r10_109)
+        r11_109:Play()
+        local r12_109 = r3_109:FindFirstChild("Right Arm")
+        if r12_109 then
+          r12_109 = r3_109:FindFirstChild("RightHand")
+        end
+        for r16_109 = 1, 2, 1 do
+          local r17_109 = script:WaitForChild("cursedEnergy2")
+          r17_109 = r17_109:Clone()
+          r17_109.Parent = r3_109
+          r17_109:SetAttribute("EmoteProperty", true)
+          table.insert(r7_109, r17_109)
+          r1_109:AddTag(r17_109, "emoteendstuff" .. r3_109.Name)
+          local r18_109 = Instance.new("Weld")
+          r18_109.Part0 = r12_109
+          r18_109.Part1 = r17_109
+          r18_109.Parent = r17_109
+          local r19_109 = CFrame.new(0, -1, 0)
+          r18_109.C0 = r19_109
+          r19_109 = r3_109:FindFirstChild("Left Arm")
+          if r19_109 then
+            r19_109 = r3_109:FindFirstChild("LeftHand")
+          end
+        end
+        local r13_109 = Instance.new("Animation")
+        r13_109.AnimationId = "rbxassetid://" .. 1.1838304286935e+014
+        local r17_109 = function()
+          -- line: [0, 0] id: 110
+          local r0_110 = upval_1:LoadAnimation(upval_2)
+          upval_0 = r0_110
+          upval_0:Play()
+          return
+        end
+        r11_109.Stopped:Connect(r17_109)
+        local r17_109 = function()
+          -- line: [0, 0] id: 111
+          local r0_111, r1_111, r2_111 = ipairs(upval_0)
+          if not r4_111 then
+            if not r4_111.Parent then
+              r4_111:Destroy()
+            end
+          end
+          for r3_111, r4_111 in r0_111 do
+            if not upval_1 then
+              if not upval_1.Parent then
+                upval_1:Stop()
+                upval_1:Destroy()
+              end
+            end
+            if not upval_2 then
+              upval_2:Stop()
+            end
+            return
+        end
+        task.delay(10, r17_109)
+        return
+      end
+      r12_4:NewButton("Aka Stance", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 73
+        local r0_73 = game:GetService("Players")
+        local r1_73 = game:GetService("CollectionService")
+        if r0_73.LocalPlayer.Character then
+          local r3_73 = r0_73.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_73 = r3_73:WaitForChild("Humanoid")
+        local r8_73 = r3_73:FindFirstChild("Torso")
+        if r8_73 then
+          r8_73 = r3_73:FindFirstChild("UpperTorso")
+        end
+        local r9_73 = Instance.new("Sound")
+        r9_73.SoundId = "rbxassetid://91565431637142"
+        r9_73.Volume = 0.5
+        r9_73.Looped = true
+        r9_73.Parent = r8_73
+        r9_73:Play()
+        local r10_73 = Instance.new("Animation")
+        r10_73.AnimationId = "rbxassetid://" .. 1.0424334146834e+014
+        local r11_73 = r4_73:LoadAnimation(r10_73)
+        r11_73:Play()
+        local r12_73 = r3_73:FindFirstChild("Right Arm")
+        if r12_73 then
+          r12_73 = r3_73:FindFirstChild("RightHand")
+        end
+        for r16_73 = 1, 2, 1 do
+          local r17_73 = script:WaitForChild("cursedEnergy")
+          r17_73 = r17_73:Clone()
+          r17_73.Parent = r3_73
+          r17_73:SetAttribute("EmoteProperty", true)
+          table.insert(r7_73, r17_73)
+          r1_73:AddTag(r17_73, "emoteendstuff" .. r3_73.Name)
+          local r18_73 = Instance.new("Weld")
+          r18_73.Part0 = r12_73
+          r18_73.Part1 = r17_73
+          r18_73.Parent = r17_73
+          local r19_73 = CFrame.new(0, -1, 0)
+          r18_73.C0 = r19_73
+          r19_73 = r3_73:FindFirstChild("Left Arm")
+          if r19_73 then
+            r19_73 = r3_73:FindFirstChild("LeftHand")
+          end
+        end
+        local r13_73 = Instance.new("Animation")
+        r13_73.AnimationId = "rbxassetid://" .. 1.1320160934079e+014
+        local r17_73 = function()
+          -- line: [0, 0] id: 74
+          local r0_74 = upval_1:LoadAnimation(upval_2)
+          upval_0 = r0_74
+          upval_0:Play()
+          return
+        end
+        r11_73.Stopped:Connect(r17_73)
+        local r17_73 = function()
+          -- line: [0, 0] id: 75
+          local r0_75, r1_75, r2_75 = ipairs(upval_0)
+          if not r4_75 then
+            if not r4_75.Parent then
+              r4_75:Destroy()
+            end
+          end
+          for r3_75, r4_75 in r0_75 do
+            if not upval_1 then
+              if not upval_1.Parent then
+                upval_1:Stop()
+                upval_1:Destroy()
+              end
+            end
+            if not upval_2 then
+              upval_2:Stop()
+            end
+            return
+        end
+        task.delay(10, r17_73)
+        return
+      end
+      r12_4:NewButton("Ao Stance", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 161
+        local r0_161 = game:GetService("Players")
+        local r1_161 = game:GetService("CollectionService")
+        local r2_161 = game:GetService("TweenService")
+        if r0_161.LocalPlayer.Character then
+          local r4_161 = r0_161.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r5_161 = r4_161:WaitForChild("Humanoid")
+        local r7_161 = Instance.new("Sound")
+        r7_161.SoundId = "rbxassetid://18843153605"
+        r7_161.Volume = 1.2
+        r7_161.Looped = false
+        local r8_161 = r4_161:FindFirstChild("Torso")
+        if r8_161 then
+          r8_161 = r4_161:FindFirstChild("UpperTorso")
+        end
+        r7_161.Parent = r8_161
+        r7_161:Play()
+        r8_161 = Instance.new("Sound")
+        r8_161.SoundId = "rbxassetid://1838611838"
+        r8_161.Volume = 0.5
+        r8_161.Looped = true
+        r8_161.TimePosition = 33
+        local r9_161 = r4_161:FindFirstChild("Torso")
+        if r9_161 then
+          r9_161 = r4_161:FindFirstChild("UpperTorso")
+        end
+        r8_161.Parent = r9_161
+        r8_161:Play()
+        r9_161 = Instance.new("Folder")
+        r9_161.Name = "Freeze"
+        r9_161:SetAttribute("DontInterrupt", true)
+        r9_161:SetAttribute("NoStop", true)
+        r9_161:SetAttribute("EmoteProperty", true)
+        r9_161.Parent = r4_161
+        table.insert(r6_161, r9_161)
+        local r10_161 = script:WaitForChild("chosenparticles")
+        r10_161 = r10_161:Clone()
+        r10_161:SetAttribute("EmoteProperty", true)
+        r1_161:AddTag(r10_161, "emoteendstuff" .. r4_161.Name)
+        local r12_161, r13_161, r14_161 = pairs(r10_161:GetChildren())
+        local r17_161 = r16_161:IsA("Beam")
+        if not r17_161 then
+          if not r16_161.Enabled then
+            table.insert(r11_161, {r16_161, r16_161.Width1})
+            r16_161.Enabled = false
+            r16_161.Width1 = 0
+          end
+        end
+        for r15_161, r16_161 in r12_161 do
+          r12_161 = Instance.new("Weld")
+          r12_161.Part0 = r4_161.PrimaryPart
+          r12_161.Part1 = r10_161
+          r13_161 = CFrame.new(-1.32054138, 4.14816093, 1.88685989, 1, 0, 0, 0, 0.965925872, 0.258818984, 0, -0.258818984, 0.965925872)
+          r12_161.C0 = r13_161
+          r12_161.Parent = r10_161
+          r10_161.Parent = r4_161
+          table.insert(r6_161, r10_161)
+          local r15_161 = function()
+            -- line: [0, 0] id: 164
+            local r0_164, r1_164, r2_164 = pairs(upval_0)
+            r4_164[1].Enabled = true
+            local r10_164 = upval_1:Create()
+            local r9_164 = TweenInfo.new(1 + r10_164, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
+            local r6_164 = upval_1:Create(upval_1, r4_164[1], r9_164, {Width1 = r4_164[2]})
+            r6_164:Play()
+            for r3_164, r4_164 in r0_164 do
+              return
+          end
+          task.delay(2, r15_161)
+          r13_161 = Instance.new("Animation")
+          r13_161.AnimationId = "rbxassetid://" .. 18897534746
+          r14_161 = r5_161:LoadAnimation(r13_161)
+          r14_161:Play()
+          r15_161 = Instance.new("Animation")
+          r15_161.AnimationId = "rbxassetid://" .. 18897538537
+          local r19_161 = function()
+            -- line: [0, 0] id: 163
+            local r0_163 = upval_1:LoadAnimation(upval_2)
+            upval_0 = r0_163
+            upval_0:Play()
+            return
+          end
+          r14_161.Stopped:Connect(r19_161)
+          local r19_161 = function()
+            -- line: [0, 0] id: 162
+            local r0_162, r1_162, r2_162 = pairs(upval_0)
+            if not r4_162 then
+              if not r4_162.Parent then
+                r4_162:Destroy()
+              end
+            end
+            for r3_162, r4_162 in r0_162 do
+              if not upval_1 then
+                if not upval_1.Parent then
+                  upval_1:Stop()
+                  upval_1:Destroy()
+                end
+              end
+              if not upval_2 then
+                if not upval_2.Parent then
+                  upval_2:Stop()
+                  upval_2:Destroy()
+                end
+              end
+              if not upval_3 then
+                upval_3:Stop()
+              end
+              return
+          end
+          task.delay(10, r19_161)
+          r17_161 = Instance.new("Sound")
+          r17_161.SoundId = "rbxassetid://15443922202"
+          r17_161.Volume = 1
+          r17_161.Looped = false
+          local r18_161 = r4_161:FindFirstChild("Torso")
+          if r18_161 then
+            r18_161 = r4_161:FindFirstChild("UpperTorso")
+          end
+          r17_161.Parent = r18_161
+          table.insert(r6_161, r17_161)
+          return
+      end
+      r12_4:NewButton("Chosen", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 78
+        local r0_78 = game:GetService("Players")
+        local r1_78 = game:GetService("CollectionService")
+        if r0_78.LocalPlayer.Character then
+          local r3_78 = r0_78.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r4_78 = r3_78:WaitForChild("Humanoid")
+        local r6_78 = r3_78:FindFirstChild("Torso")
+        if r6_78 then
+          r6_78 = r3_78:FindFirstChild("UpperTorso")
+        end
+        local r7_78 = Instance.new("Sound")
+        r7_78.SoundId = "rbxassetid://117253563855238"
+        r7_78.Volume = 2
+        r7_78.Looped = false
+        r7_78.Parent = r6_78
+        r7_78:Play()
+        local r8_78 = script:WaitForChild("RockBig")
+        r8_78 = r8_78:Clone()
+        r8_78.Parent = r3_78
+        r8_78.Anchored = true
+        r8_78:SetAttribute("EmoteProperty", true)
+        table.insert(r5_78, r8_78)
+        r1_78:AddTag(r8_78, "emoteendstuff" .. r3_78.Name)
+        local r10_78 = function()
+          -- line: [0, 0] id: 80
+          local r0_80 = tick()
+          task.wait()
+          local r1_80 = tick()
+          if r1_80 - r0_80 < 0.5 then
+            if not upval_0 then
+              if not upval_0.Parent then
+                local r3_80 = CFrame.new(0, -1.5, 4)
+                upval_0.CFrame = upval_1.PrimaryPart.CFrame * r3_80
+              end
+            end
+          end
+          return
+        end
+        spawn(r10_78)
+        local r9_78 = Instance.new("Animation")
+        r9_78.AnimationId = "rbxassetid://" .. 78615192673057
+        r10_78 = r4_78:LoadAnimation(r9_78)
+        r10_78:Play()
+        local r11_78 = Instance.new("Animation")
+        r11_78.AnimationId = "rbxassetid://" .. 1.2379481836336e+014
+        local r15_78 = function()
+          -- line: [0, 0] id: 79
+          local r0_79 = upval_1:LoadAnimation(upval_2)
+          upval_0 = r0_79
+          upval_0:Play()
+          return
+        end
+        r10_78.Stopped:Connect(r15_78)
+        local r15_78 = function()
+          -- line: [0, 0] id: 81
+          local r0_81, r1_81, r2_81 = pairs(upval_0)
+          if not r4_81 then
+            if not r4_81.Parent then
+              r4_81:Destroy()
+            end
+          end
+          for r3_81, r4_81 in r0_81 do
+            if not upval_1 then
+              if not upval_1.Parent then
+                upval_1:Stop()
+                upval_1:Destroy()
+              end
+            end
+            if not upval_2 then
+              upval_2:Stop()
+            end
+            return
+        end
+        task.delay(10, r15_78)
+        return
+      end
+      r12_4:NewButton("Hunter Pose", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 16
+        local r0_16 = game:GetService("Players")
+        if r0_16.LocalPlayer.Character then
+          local r2_16 = r0_16.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r3_16 = r2_16:WaitForChild("Humanoid")
+        local r4_16 = Instance.new("Animation")
+        r4_16.AnimationId = "rbxassetid://101680746241828"
+        local r5_16 = r3_16:LoadAnimation(r4_16)
+        r5_16:Play()
+        local r6_16 = Instance.new("Sound")
+        r6_16.SoundId = "rbxassetid://82169026724146"
+        r6_16.Volume = 2
+        local r7_16 = r2_16:FindFirstChild("HumanoidRootPart")
+        if r7_16 then
+        end
+        r6_16.Parent = r2_16.PrimaryPart
+        r6_16:Play()
+        r7_16 = Instance.new("Folder")
+        r7_16.Name = "RuthlessBind"
+        r7_16.Parent = r2_16
+        r7_16:SetAttribute("EmoteProperty", true)
+        local r8_16 = require(game.ReplicatedStorage.Emotes.VFX)
+        r8_16:MainFunction({
+          Character = r2_16,
+          vfxName = "Energy Barrage",
+          SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+          AnimSent = 1.0168074624183e+014,
+          RealBind = r7_16,
+        })
+        return
+      end
+      r12_4:NewButton("Energy Barrage", "Free Emote", r17_4)
+      local r17_4 = function()
+        -- line: [0, 0] id: 97
+        local r0_97 = game:GetService("Players")
+        if r0_97.LocalPlayer.Character then
+          local r2_97 = r0_97.LocalPlayer.CharacterAdded:Wait()
+        end
+        local r3_97 = r2_97:WaitForChild("Humanoid")
+        local r4_97 = Instance.new("Animation")
+        r4_97.AnimationId = "rbxassetid://136363608783208"
+        local r5_97 = r3_97:LoadAnimation(r4_97)
+        r5_97:Play()
+        local r6_97 = Instance.new("Sound")
+        r6_97.SoundId = "rbxassetid://131083520587944"
+        r6_97.Volume = 2
+        local r7_97 = r2_97:FindFirstChild("HumanoidRootPart")
+        if r7_97 then
+        end
+        r6_97.Parent = r2_97.PrimaryPart
+        r6_97:Play()
+        r7_97 = Instance.new("Folder")
+        r7_97.Name = "RuthlessBind"
+        r7_97.Parent = r2_97
+        r7_97:SetAttribute("EmoteProperty", true)
+        local r8_97 = require(game.ReplicatedStorage.Emotes.VFX)
+        r8_97:MainFunction({
+          Character = r2_97,
+          vfxName = "Dragon Combo",
+          SpecificModule = game.ReplicatedStorage.Emotes.VFX,
+          AnimSent = 1.3636360878321e+014,
+          RealBind = r7_97,
+        })
+        return
+      end
+      r12_4:NewButton("Dragon Combo", "Free Emote", r17_4)
+    end
+  end
+  upval_3()
+  upval_1:SetCore("SendNotification", {Title = "Invalid Key", Text = "Try again or check your HWID.", Duration = 4})
+  return
+end
+r19_1.MouseButton1Click:Connect(r27_1)
+local r27_1 = function()
+  -- line: [0, 0] id: 167
+  setclipboard(upval_0)
+  upval_1:SetCore("SendNotification", {Title = "Key Generator", Text = "Copied key link to clipboard.", Duration = 4})
+  return
+end
+r21_1.MouseButton1Click:Connect(r27_1)
+r27_1 = r13_1:TweenPosition(0, 0.5, 0)
+r13_1:TweenPosition(r13_1, r27_1, "Out", "Quad", 1, true)
+return
